@@ -5,6 +5,11 @@ const carSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide the car model"]
     },
+    category: {
+        type: String,
+        default: "normal",
+        enum: ["popular", "upcoming", "super", "normal"]
+    },        
     specifications: {
         exterior_color: {
             type: String,            

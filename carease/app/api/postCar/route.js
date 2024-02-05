@@ -11,6 +11,7 @@ export async function POST (request) {
     const data = await request.formData()
     
     const model = data.get('model')
+    const category = data.get('category')
     const exterior_color = data.get('exterior_color')
     const interior_color = data.get('interior_color')
     const drivetrain = data.get('drivetrain')
@@ -46,6 +47,7 @@ export async function POST (request) {
         
         const car = new Car({
             model, 
+            category,
             specifications: {
                 exterior_color,
                 interior_color,
