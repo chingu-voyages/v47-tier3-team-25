@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        supercar: 'url(/images/supercar.png)',
+      },
+      colors: {
+        overlay_bg: '#14111169',
+        btn_blue: '#AACBED',
       },
     },
   },
