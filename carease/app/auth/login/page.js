@@ -42,7 +42,6 @@ const page = () => {
                 width={30}
                 height={30}
                 alt="google"
-                // className="mx-auto"
               />{' '}
               Sign in with Google
             </button>
