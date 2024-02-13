@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         supercar: 'url(/images/supercar.png)',
+        'signup-bg': 'url(/images/signup-bg.jpg)',
       },
       colors: {
         overlay_bg: '#14111169',
