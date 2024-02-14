@@ -1,9 +1,6 @@
-
-
-import "./Auth/ForgotPassword/ForgotPassword.css";
+import './auth/forgotpassword/ForgotPassword.css';
 
 import './globals.css';
-
 
 export const metadata = {
   title: 'CarEase',
