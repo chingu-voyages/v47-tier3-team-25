@@ -4,14 +4,29 @@ import logo from '../../../public/images/logo.svg';
 import google from '../../../public/images/google.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import axios from 'axios';
+import { Router, useRouter } from 'next/navigation';
 
 const page = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const router = useRouter();
+
+  const [user, setUser] = useState({
+    email: '',
+    password: '',
+  });
   const [show, setShow] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const response = await axios.post('/api/users/login', user);
+      console.log(response);
+      console.log('Login successfull', response.data);
+
+      router.push('/carlist');
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -37,18 +52,13 @@ const page = () => {
           <div className="flex flex-col gap-6">
             <button className="flex gap-2 border-2  w-full justify-center py-2 rounded-md text-lg">
               {' '}
-              <Image
-                src={google}
-                width={30}
-                height={30}
-                alt="google"
-              />{' '}
-              Sign in with Google
+              <Image src={google} width={30} height={30} alt="google" /> Sign in
+              with Google
             </button>
             <div className="relative">
-              <hr className="absolute  top-[50%] z-0 bg-white w-[26%] h-[0.10rem]" />
+              <hr className="absolute  top-[50%] z-0 bg-white w-[23%] h-[0.10rem]" />
               <p className="text-center z-30">Or Sign in with Email</p>
-              <hr className="absolute right-0 top-[50%] z-0 bg-white w-[26%] h-[0.10rem]" />
+              <hr className="absolute right-0 top-[50%] z-0 bg-white w-[23%] h-[0.10rem]" />
             </div>
           </div>
 
@@ -56,21 +66,21 @@ const page = () => {
             <div>
               <label className="font-bold">EMAIL</label>
               <input
-                value={email}
+                value={user.email}
                 type="email"
                 placeholder="Enter Your Email Id"
                 className="w-full h-[47.582px] flex-shrink-0 border-2 px-4 rounded-md mt-2 bg-transparent outline-none"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
               />
             </div>
             <div className="relative">
               <label className="font-bold"> PASSWORD</label>
               <input
-                value={password}
+                value={user.password}
                 type={show ? 'text' : 'password'}
                 placeholder="Enter Your Password"
                 className="w-full h-[47.582px] flex-shrink-0 border-2 px-4 rounded-md mt-2 bg-transparent outline-none"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
               />
               <button
                 type="button"

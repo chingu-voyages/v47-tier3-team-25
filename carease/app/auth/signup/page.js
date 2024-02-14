@@ -1,18 +1,32 @@
 'use client';
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import logo from '../../../public/images/logo.svg';
 import google from '../../../public/images/google.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import axios from 'axios';
 
 const page = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
+  const router = useRouter();
+  const [user, setUser] = useState({
+    username: '',
+    email: '',
+    role: '',
+    password: '',
+  });
   const [show, setShow] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const response = await axios.post('/api/users/signup', user);
+      console.log('Signup successfull', response.data);
+
+      router.push('/auth/login');
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -59,31 +73,41 @@ const page = () => {
             <div>
               <label className="font-bold">NAME</label>
               <input
-                value={name}
-                type="name"
+                value={user.username}
+                type="username"
                 placeholder="Enter Your Name"
                 className="w-full h-[47.582px] flex-shrink-0 border-2 px-4 rounded-md mt-2 bg-transparent outline-none"
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setUser({ ...user, username: e.target.value })}
               />
             </div>
             <div>
               <label className="font-bold">EMAIL</label>
               <input
-                value={email}
+                value={user.email}
                 type="email"
                 placeholder="Enter Your Email Id"
                 className="w-full h-[47.582px] flex-shrink-0 border-2 px-4 rounded-md mt-2 bg-transparent outline-none"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+              />
+            </div>
+            <div>
+              <label className="font-bold">ROLE</label>
+              <input
+                value={user.role}
+                type="text"
+                placeholder="Enter Your Role"
+                className="w-full h-[47.582px] flex-shrink-0 border-2 px-4 rounded-md mt-2 bg-transparent outline-none"
+                onChange={(e) => setUser({ ...user, role: e.target.value })}
               />
             </div>
             <div className="relative">
               <label className="font-bold"> PASSWORD</label>
               <input
-                value={password}
+                value={user.password}
                 type={show ? 'text' : 'password'}
                 placeholder="Enter Your Password"
                 className="w-full h-[47.582px] flex-shrink-0 border-2 px-4 rounded-md mt-2 bg-transparent outline-none"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
               />
               <button
                 type="button"
@@ -102,7 +126,7 @@ const page = () => {
                 />{' '}
                 Remember me
               </div>
-              <Link href="/auth/forgetpassword"> Forgot Password ?</Link>
+              <Link href="/auth/forgotpassword"> Forgot Password ?</Link>
             </div>
             <button
               type="submit"
