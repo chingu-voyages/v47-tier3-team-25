@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
@@ -22,4 +22,18 @@
     --background-start-rgb: rgb(0, 0, 0);
     --background-end-rgb: rgb(0, 0, 0);
   }
+}
+
+.hexa {
+  width: 0;
+  border-bottom: 100px solid white;
+  border-left: 150px solid transparent;
+
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: #f14021 !important;
+  width: 23.3% !important ;
+  border-radius: 0% !important;
 }
