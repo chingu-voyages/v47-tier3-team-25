@@ -1,9 +1,10 @@
-
+import Navbar from '@/Components/Navbar';
 
 export default function Home() {
   return (
-    <h1 className="text-green-500">
-      CarEase
-    </h1>
+    <>
+      <Navbar />
+      <h1 className="text-green-500">CarEase</h1>
+    </>
   );
 }
