@@ -19,7 +19,9 @@
     "next": "14.1.0",
     "next-connect": "^0.12.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
