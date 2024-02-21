@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
       <div className="absolute top-[60%] left-10 md:max-w-[50rem] text-white">
         <h2 className="font-bold text-[30px] md:text-[50px]">AVENTADOR SVJ</h2>
-        <p className="mt-6 text-sm">
+        <p className="mt-6 text-sm md:text-xl">
           The Revuelto is the beginning of a new era for Lamborghini, who has
           harnessed the power of hybridization technology to create the first
           HPEV (High Performance Electrified Vehicle).
