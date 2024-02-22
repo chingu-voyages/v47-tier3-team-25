@@ -9,10 +9,11 @@ import LamborghiniLogo from '../public/images/Lamborghini-Logo.png';
 import HeroImage from '../public/images/Lambo-by-Abdulwahab-Alawadhi.svg';
 import HeroImage2 from '../public/images/Hero-2.svg';
 import Image from 'next/image';
+import OurBusiness from '@/Components/OurBusiness';
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero
         title="AVENTADOR SVJ"
         desc="The Revuelto is the beginning of a new era for Lamborghini, who has
@@ -20,16 +21,21 @@ export default function Home() {
           HPEV (High Performance Electrified Vehicle)."
         btnName="Explore More"
         bgImage={HeroImage}
+        link="carlist"
       />
       <Overview />
-      <div className="">
-        <h4 className="text-[60px] font-semibold">AVAILABLE CARS</h4>
+      <div className="md:px-20">
+        <h4 className="text-center text-[30px] md:text-[60px] font-semibold capitalize">
+          Available Cars
+        </h4>
         <HeroCarousels />
       </div>
-      <div className="my-10">
-        <h4 className="text-[60px] font-semibold">POPULAR BRANDS</h4>
-        <div className="flex justify-around items-center h-[250px] ">
-          {[mclarenLogo, bmwLogo, maseratiLogo, LamborghiniLogo].map((logo) => (
+      <div className="my-10 md:px-20 h-[1000px] sm:h-[600px] text-center mt-10">
+        <h4 className="text-[30px] md:text-[60px] font-semibold ">
+          Popular Brands
+        </h4>
+        <div className="flex flex-wrap gap-4 mt-10 justify-around items-center h-[250px] ">
+          {[mclarenLogo, maseratiLogo, bmwLogo, LamborghiniLogo].map((logo) => (
             <div className=" border-2 p-4 border-[#D9D9D9]">
               <Image
                 src={logo}
@@ -42,14 +48,17 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <Hero
-        title="MCLAREN 720S"
-        desc="A super-fast and stylish car that gives you an incredible driving experience"
-        btnName="Discover"
-        bgImage={HeroImage2}
-      />
-
+      <div className="">
+        <Hero
+          title="MCLAREN 720S"
+          desc="A super-fast and stylish car that gives you an incredible driving experience"
+          btnName="Discover"
+          bgImage={HeroImage2}
+          link="carlist"
+        />
+      </div>
+      <OurBusiness />
       <Footer />
-    </>
+    </main>
   );
 }
