@@ -11,9 +11,12 @@ import HeroImage2 from '../public/images/Hero-2.svg';
 import Image from 'next/image';
 import OurBusiness from '@/Components/OurBusiness';
 
+import Navbar from '@/Components/Navbar';
+
 export default function Home() {
   return (
     <main>
+      <Navbar />
       <Hero
         title="AVENTADOR SVJ"
         desc="The Revuelto is the beginning of a new era for Lamborghini, who has

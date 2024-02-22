@@ -35,13 +35,15 @@ const page = () => {
         Welcome Back,
       </h3>
       <div className=" bg-overlay_bg mx-auto w-[428px] h-[670.304px] pb-1 pt-5 px-14 rounded-lg">
-        <Image
-          src={logo}
-          width={100}
-          height={100}
-          alt="supercar"
-          className="mx-auto"
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            width={100}
+            height={100}
+            alt="supercar"
+            className="mx-auto cursot-pointer"
+          />
+        </Link>
         <div className="flex flex-col gap-6">
           <h4 className="text-[28px] font-semibold">Login</h4>
 
