@@ -8,7 +8,7 @@ const carSchema = new mongoose.Schema({
     category: {
         type: String,
         default: "normal",
-        enum: ["popular", "upcoming", "super", "normal"]
+        enum: ["popular", "upcoming", "supercars", "other"]
     },        
     specifications: {
         exterior_color: {
