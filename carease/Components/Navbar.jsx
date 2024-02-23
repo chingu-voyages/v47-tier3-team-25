@@ -11,7 +11,7 @@ const Navbar = () => {
             src="./images/profile-logo.svg"
             width={20}
             height={10}
-            alt="profile"
+            alt="profile-logo"
           />
           <a href="/auth/login">Login</a>
           <p>/</p>

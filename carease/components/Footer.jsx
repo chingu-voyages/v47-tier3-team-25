@@ -16,7 +16,7 @@ const Footer = () => {
             <div>
               <ul className="flex flex-col gap-8">
                 {['Partner', 'Careers', 'Media'].map((item) => (
-                  <li>
+                  <li key={item}>
                     <a href="#">{item}</a>
                   </li>
                 ))}
@@ -30,7 +30,7 @@ const Footer = () => {
                   'CarEase Applied',
                   'Investor',
                 ].map((item) => (
-                  <li>
+                  <li key={item}>
                     <a href="#">{item}</a>
                   </li>
                 ))}
@@ -48,7 +48,7 @@ const Footer = () => {
                 'Find a Retailer',
                 'Roadside Assistance',
               ].map((item) => (
-                <li>
+                <li key={item}>
                   <a href="#">{item}</a>
                 </li>
               ))}
@@ -62,7 +62,7 @@ const Footer = () => {
                   <RxDiscordLogo />,
                   <CiTwitter />,
                 ].map((item) => (
-                  <li>
+                  <li className="item" key={item}>
                     <a href="#" className="text-2xl">
                       {item}
                     </a>

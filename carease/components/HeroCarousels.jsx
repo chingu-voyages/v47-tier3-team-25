@@ -1,10 +1,9 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Button from './Button';
 
@@ -16,7 +15,6 @@ const HeroCarousels = () => {
         pagination={true}
         modules={[Navigation, Pagination]}
         spaceBetween={50}
-        slidesPreView={3}
         scrollbar={{ draggable: true }}
         className=""
       >
@@ -69,6 +67,7 @@ const HeroCarousels = () => {
               width={700}
               height={400}
               className="mx-auto"
+              alt="lambo"
             />
             <h5 className="text-2xl mb-2 font-bold">AVENTADOR SV J</h5>
             <div className="inline-flex gap-8">

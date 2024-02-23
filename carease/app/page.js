@@ -39,7 +39,7 @@ export default function Home() {
         </h4>
         <div className="flex flex-wrap gap-4 mt-10 justify-around items-center h-[250px] ">
           {[mclarenLogo, maseratiLogo, bmwLogo, LamborghiniLogo].map((logo) => (
-            <div className=" border-2 p-4 border-[#D9D9D9]">
+            <div className=" border-2 p-4 border-[#D9D9D9]" key={logo}>
               <Image
                 src={logo}
                 width={200}
