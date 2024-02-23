@@ -21,7 +21,7 @@ const HeroCarousels = () => {
         className=""
       >
         <SwiperSlide>
-          <div className="text-center ">
+          <div className="text-center px-10">
             <Image
               src="/images/red-lamborghini.svg"
               width={700}
