@@ -2,16 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@layer base {
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: rgb(0, 0, 0);
+  --background-start-rgb: rgb(214, 219, 220);
+  --background-end-rgb: rgb(255, 255, 255);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: rgb(255, 255, 255);
+    --background-start-rgb: rgb(0, 0, 0);
+    --background-end-rgb: rgb(0, 0, 0);
   }
+}
+
+.hexa {
+  width: 0;
+  border-bottom: 100px solid white;
+  border-left: 150px solid transparent;
+
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: #f14021 !important;
+  width: 23.3% !important ;
+  border-radius: 0% !important;
 }

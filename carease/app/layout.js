@@ -1,3 +1,6 @@
+
+import './globals.css';
+
 export const metadata = {
   title: 'CarEase',
   description: 'Car Comparision Webapp',
