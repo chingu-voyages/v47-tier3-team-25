@@ -30,18 +30,18 @@ const page = () => {
   };
 
   return (
-    <section className=" bg-supercar bg-cover h-[100%] text-white py-6 px-4 tracking-wide">
+    <section className=" bg-supercar   bg-cover h-[100%] text-white py-6 px-4 tracking-wide">
       <h3 className="text-2xl text-center md:text-left mb-4 lg:mb-0">
         Welcome Back,
       </h3>
-      <div className=" bg-overlay_bg mx-auto w-[428px] h-[670.304px] pb-1 pt-5 px-14 rounded-lg">
+      <div className=" bg-overlay_bg mx-auto w-[100%] sm:w-[428px] h-[670.304px] pb-1 pt-5 px-4 sm:px-14 rounded-lg">
         <Link href="/">
           <Image
             src={logo}
             width={100}
             height={100}
             alt="supercar"
-            className="mx-auto cursot-pointer"
+            className="mx-auto cursor-pointer"
           />
         </Link>
         <div className="flex flex-col gap-6">
@@ -58,9 +58,9 @@ const page = () => {
               with Google
             </button>
             <div className="relative">
-              <hr className="absolute  top-[50%] z-0 bg-white w-[23%] h-[0.10rem]" />
+              <hr className="absolute  top-[50%] z-0 bg-white w-[15%] sm:w-[23%] h-[0.10rem]" />
               <p className="text-center z-30">Or Sign in with Email</p>
-              <hr className="absolute right-0 top-[50%] z-0 bg-white w-[23%] h-[0.10rem]" />
+              <hr className="absolute right-0 top-[50%] z-0 bg-white w-[15%] sm:w-[23%] h-[0.10rem]" />
             </div>
           </div>
 
