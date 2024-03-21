@@ -1,7 +1,7 @@
-import Footer from '@/Components/Footer';
-import Hero from '@/Components/Hero';
-import HeroCarousels from '@/Components/HeroCarousels';
-import Overview from '@/Components/Overview';
+import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
+import HeroCarousels from '@/components/HeroCarousels';
+import Overview from '@/components/Overview';
 import mclarenLogo from '../public/images/mclaren-logo.png';
 import bmwLogo from '../public/images/bmw-logo.png';
 import maseratiLogo from '../public/images/maserati-logo.png';
@@ -9,9 +9,9 @@ import LamborghiniLogo from '../public/images/Lamborghini-Logo.png';
 import HeroImage from '../public/images/Lambo-by-Abdulwahab-Alawadhi.svg';
 import HeroImage2 from '../public/images/Hero-2.svg';
 import Image from 'next/image';
-import OurBusiness from '@/Components/OurBusiness';
+import OurBusiness from '@/components/OurBusiness';
 
-import Navbar from '@/Components/Navbar';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
   return (

@@ -30,12 +30,12 @@ const page = () => {
   };
 
   return (
-    <section className="flex bg-signup-bg bg-cover h-[100%] text-white py-6 px-4 tracking-wide">
-      <div className="mx-auto my-auto order-last">
-        <h3 className="text-2xl text-center md:text-left mb-4 lg:mb-0">
+    <section className="flex flex-col sm:flex-row bg-signup-bg bg-cover h-[100%] text-white py-6 px-4 tracking-wide">
+      <div className="mx-auto my-6 sm:my-auto sm:order-last">
+        <h3 className="text-2xl text-center md:text-left mb-6 lg:mb-0">
           Sign Up
         </h3>
-        <p>
+        <p className="sm:text-white text-black font-semibold">
           Unlock a Seamless Car Buying Experience: Create Your Account Today
         </p>
       </div>
@@ -63,9 +63,9 @@ const page = () => {
               with Google
             </button>
             <div className="relative">
-              <hr className="absolute  top-[50%] z-0 bg-white w-[26%] h-[0.10rem]" />
+              <hr className="absolute  top-[50%] z-0 bg-white w-[17%] sm:w-[26%] h-[0.10rem]" />
               <p className="text-center z-30">Or Sign in with Email</p>
-              <hr className="absolute right-0 top-[50%] z-0 bg-white w-[26%] h-[0.10rem]" />
+              <hr className="absolute right-0 top-[50%] z-0 bg-white w-[17%] sm:w-[26%] h-[0.10rem]" />
             </div>
           </div>
 
