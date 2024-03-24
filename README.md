@@ -1,28 +1,50 @@
-# voyage-tasks
+# CarEase
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## Overview 
+CarEase is a Fullstack web app built with NextJs. It is a platform for the car enthusiasts to browse the listed cars and compare them so that they can make the best decision while purchasing their dream car. This team-project was developed as a part of Chingu-Voyage-47.
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+### CHECK IT LIVE [Click here](https://carease-25.vercel.app/)
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## How to run locally :
 
-> Own it & Make it your Own!
+- Clone this repo
+- Open a terminal and go to the project folder (ex: user@user:/myProjects/v47-tier3-team-25$)
+- Inside your project folder, in the terminal type `cd carease`
+- Rename `.env.example` file to `.env.local` and fill in your values for environment variables.
+- Now, `npm install`
+- Then, `npm run dev`
 
-## Team Documents
+**If you have followed the above steps, your project should be running on http://localhost:3000**
 
-You may find these helpful as you work together to organize your project.
+## Features
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+- Landing Page
+- User Authentication (Roles - Customer, Dealer, Admin)
+- Explore cars - lets the user browse through top 3 cars from each category (SuperCars, PopularCars, UpcomingCars, Others)
+- Users can navigate to each category section with the help of a Filter Navigation.
+- Users can View all models belonging to a particular category.
+- Users can click on View Model to view a particular car.
+- Users can compare cars by clicking on the compare car button against each listed car.
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+## Tech Stack Used
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+- Next.js with MongoDB
+- Additional packages/dependencies include : (these are all listed in the `package.json` file)
+    1. axios
+    2. bcrypt
+    3. cloudinary
+    4. datauri
+    5. jsonwebtoken
+    6. mongoose
+    7. react-icons
+    8. swiperjs
+
+
+## Team credits -
+
+**Frontend Team** - [Umesh Sharma](https://github.com/Omeshcoding), [Jyotirmoy Das](https://github.com/jdx-code), [Stella Wanja](https://github.com/StellaWanja), [Mostafa Higazy](https://github.com/DjTer3a) 
+
+**Backend Team** - [Jyotirmoy Das](https://github.com/jdx-code), [Umesh Sharma](https://github.com/Omeshcoding)
+
+**UI/UX Designer** - Yogananth 
+

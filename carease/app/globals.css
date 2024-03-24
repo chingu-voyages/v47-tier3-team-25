@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @layer base {
+
   html {
     font-family: 'Inter', system-ui, sans-serif;
   }
@@ -33,7 +34,7 @@
 }
 
 .swiper-pagination-bullet {
-  background: #f14021 !important;
+  background: #000 !important;
   width: 23.3% !important ;
   border-radius: 0% !important;
 }
