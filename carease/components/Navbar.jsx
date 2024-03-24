@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGripLines } from 'react-icons/fa';
@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav ">
       <Link href="/">
         <Image
           src="./images/carease-logo.svg"
@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
       {/* desktop navbar */}
       <div className="nav-desktop ">
-        <div className="flex items-center  text-xl text-bold  gap-14 ">
+        <div className="flex items-center  text-xl text-bold  gap-6 ">
           <Link href="/" className="bg-white px-8 py-1 rounded-2xl">
             Carlist
           </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="xl:ml-auto">
-          <div className="flex gap-10 items-center  ">
+          <div className="flex gap-6 items-center  ">
             <Image
               src="./images/compare-arrow-nav.svg"
               width={40}

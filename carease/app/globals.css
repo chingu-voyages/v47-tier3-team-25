@@ -39,7 +39,7 @@
 }
 
 .nav {
-  @apply relative flex items-center justify-between px-10  py-6 xl:py-2 text-black bg-gradient-to-t to-[#343131]/60 from-black text-xl font-bold;
+  @apply fixed top-0 w-full z-50 flex items-center justify-between px-10  py-6 xl:py-2 text-black bg-gradient-to-t to-[#343131]/80 from-black/50 text-xl font-bold;
 }
 .navlink {
   @apply px-8 py-4 rounded-2xl w-full;
