@@ -12,6 +12,7 @@ import Image from 'next/image';
 import OurBusiness from '@/components/OurBusiness';
 
 import Navbar from '@/components/Navbar';
+import About from '@/components/About';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         bgImage={HeroImage}
         link="carlist"
       />
+      <About />
       <Overview />
       <div className="md:px-20">
         <h4 className="text-center text-[30px] md:text-[60px] font-semibold capitalize">
@@ -59,7 +61,7 @@ export default function Home() {
           bgImage={HeroImage2}
           link="carlist"
         />
-      </div>
+      </div>      
       <OurBusiness />
       <Footer />
     </main>
