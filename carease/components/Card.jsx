@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import Button from './Button';'
-import Link from 'next/link'
+import Button from './Button';
+import Link from 'next/link';
 
 import CompareCarModel from './CompareCarModel';
 const Card = ({ tag, imageUrl, model, carId }) => {
@@ -24,18 +24,18 @@ const Card = ({ tag, imageUrl, model, carId }) => {
             width={450}
             height={400}
             alt={model}
+            priority={false}
           />
         </div>
       </div>
       <p className="text-4xl my-4">{model}</p>
       <div className="flex justify-around lg:justify-between ">
-        
         <Link href={`/car/${carId}`}>
-        <Button
-          styleType={'bg-[#F14021] text-white border-none'}
-          name="View Model"
-        />
-         </Link>
+          <Button
+            styleType={'bg-[#F14021] text-white border-none'}
+            name="View Model"
+          />
+        </Link>
         <Button
           handleModel={handleModel}
           styleType={'border-2 border-[#D9D9D9]'}

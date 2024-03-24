@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { MdOutlineCancelPresentation } from 'react-icons/md';
+import Button from './Button';
+import Link from 'next/link';
 const CompareCarModel = ({ handleModel }) => {
   const [showMore, setShowMore] = useState(false);
   const [selectedCar, setSelectedCar] = useState('');
@@ -30,13 +32,19 @@ const CompareCarModel = ({ handleModel }) => {
               <label htmlFor={car}>{car}</label>
             </div>
           ))}
+          <Link href="/compare">
+            <Button
+              styleType={'border-2 border-[#D9D9D9]'}
+              name="Compare Car"
+            />
+          </Link>
         </div>
-        <button
+        {/* <button
           onClick={() => setShowMore(!showMore)}
           className="absolute bottom-4 right-4"
         >
           More ..
-        </button>
+        </button> */}
       </div>
     </div>
   );
