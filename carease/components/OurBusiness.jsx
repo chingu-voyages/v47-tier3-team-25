@@ -20,7 +20,7 @@ const OurBusiness = () => {
         'Luxury vehicles',
       ];
       console.log(className);
-      return `<span class='lg:font-bold lg:text-xl border-b-[40px] text-white border-b-[#f14021] py-2 px-2 my-2 ${className} rounded-md'  >${items[index]} </span>`;
+      return `<span class='lg:font-bold lg:text-xl border-b-[40px] text-white border-b-[#000] py-2 px-2 my-2 ${className} rounded-md'>${items[index]} </span>`;
     },
   };
   return (
@@ -28,7 +28,8 @@ const OurBusiness = () => {
       pagination={pagination}
       modules={[Pagination]}
       spaceBetween={50}
-      className="w-full h-[880px] lg:h-[713px] bg-blue-200 my-10  px-6"
+      // className="w-full h-[880px] lg:h-[713px] bg-yellow-200 my-10  px-6"
+      className="w-full h-[880px] lg:h-[713px] bg-gradient-to-b from-white to-[#908C8D] my-10 px-6"      
     >
       <SwiperSlide>
         <div className="flex flex-col md:flex-row py-2 md:py-20 px-2 md:px-20 items-center">
