@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import HeroCarousels from '@/components/HeroCarousels';
+import VideoCarousels from '@/components/VideoCarousels';
 import Overview from '@/components/Overview';
 import mclarenLogo from '../public/images/mclaren-logo.png';
 import bmwLogo from '../public/images/bmw-logo.png';
@@ -31,7 +31,6 @@ export default function Home() {
         <h4 className="text-center text-[30px] md:text-[60px] font-semibold capitalize">
           Available Cars
         </h4>
-        <HeroCarousels />
       </div>
       <div className="my-10 md:px-20 h-[1000px] sm:h-[600px] text-center mt-10">
         <h4 className="text-[30px] md:text-[60px] font-semibold ">
@@ -61,6 +60,9 @@ export default function Home() {
         />
       </div>
       <OurBusiness />
+      <div className="h-[600px] py-10">
+        <VideoCarousels />
+      </div>
       <Footer />
     </main>
   );
