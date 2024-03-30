@@ -1,13 +1,22 @@
+/* Font for small headings */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
+/* Font for big headings */
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Font for entire html-body */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
 
 @layer base {
 
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;  
   }
 }
 
@@ -29,7 +38,6 @@
   width: 0;
   border-bottom: 100px solid white;
   border-left: 150px solid transparent;
-
   width: 100%;
 }
 
