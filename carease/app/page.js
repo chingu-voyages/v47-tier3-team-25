@@ -13,6 +13,7 @@ import OurBusiness from '@/components/OurBusiness';
 
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
+import FeaturedComparison from '@/components/FeaturedComparison';
 
 export default function Home() {
   return (
@@ -62,7 +63,7 @@ export default function Home() {
           link="carlist"
         />
       </div>      
-      <OurBusiness />
+      <FeaturedComparison />
       <Footer />
     </main>
   );
