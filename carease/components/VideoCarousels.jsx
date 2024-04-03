@@ -11,9 +11,6 @@ const VideoCarousels = () => {
   return (
     <>
       <Swiper
-        // pagination={{
-        //   clickable: true,
-        // }}
         crossFade="true"
         autoplay={{
           delay: 5500,
@@ -31,7 +28,7 @@ const VideoCarousels = () => {
             // controls
             autoPlay
             loop
-            className=" w-[90vw] mx-auto h-[500px] bg-cover"
+            className=" w-[100%] mx-auto lg:h-[700px] bg-cover"
             preload="auto"
           >
             <source
@@ -47,7 +44,7 @@ const VideoCarousels = () => {
             // controls
             autoPlay
             loop
-            className="w-[90vw] mx-auto h-[500px] bg-cover"
+            className="w-[100%] mx-auto lg:h-[700px] bg-cover"
             // preload="auto"
           >
             <source
@@ -63,7 +60,7 @@ const VideoCarousels = () => {
             // controls
             autoPlay
             loop
-            className="w-[90vw] h-[500px] mx-auto"
+            className="w-[100%] lg:h-[700px] mx-auto"
             // preload="none"
             src="/videos/RR_Video_by_Ammad_Rasool.mp4"
           >

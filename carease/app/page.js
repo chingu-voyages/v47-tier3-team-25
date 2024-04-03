@@ -60,7 +60,7 @@ export default function Home() {
         />
       </div>
       <OurBusiness />
-      <div className="h-[600px] py-10">
+      <div className="h-[300px] sm:h-[500px] lg:h-[800px] py-10">
         <VideoCarousels />
       </div>
       <Footer />
