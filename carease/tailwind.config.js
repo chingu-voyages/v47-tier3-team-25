@@ -18,8 +18,12 @@ module.exports = {
       colors: {
         overlay_bg: '#14111169',
         btn_blue: '#AACBED',
-      },
+      },      
     },
+    fontFamily: {
+      smallHeadings: ["Italiana", "sans-serif"],
+      bigHeadings: ["Gloock", "serif"],
+    }
   },
   plugins: [],
 };
