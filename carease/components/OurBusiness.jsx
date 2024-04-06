@@ -29,10 +29,10 @@ const OurBusiness = () => {
       modules={[Pagination]}
       spaceBetween={50}
       // className="w-full h-[880px] lg:h-[713px] bg-yellow-200 my-10  px-6"
-      className="w-full h-[880px] lg:h-[713px] bg-gradient-to-b from-white to-[#908C8D] my-10 px-6"      
+      className="w-full h-[880px] lg:h-[713px] bg-gradient-to-b from-white to-[#908C8D] my-10 px-6 cursor-grab"      
     >
       <SwiperSlide>
-        <div className="flex flex-col md:flex-row py-2 md:py-20 px-2 md:px-20 items-center">
+        <div className="mx-10 flex flex-col md:flex-row py-2 md:py-20 px-2 md:px-20 items-center">
           <div className="md:w-[50%] flex flex-col gap-10">
             <h4 className="text-[30px] font-bigHeadings md:text-[60px] font-normal">
               Our Business
@@ -40,7 +40,7 @@ const OurBusiness = () => {
             <h5 className="text-3xl font-smallHeadings text-[#5B9CFF] font-semibold">
               New forever
             </h5>
-            <p className="text-2xl max-w-[511px]">
+            <p className="text-[1.1rem] sm:text-2xl max-w-[511px]">
               Cutting-edge designs, quest to excel and promise to delight
               customers keeps us ahead of the curve. Our cars and SUVs offer
               best-in-class safety and superior driving experience.
