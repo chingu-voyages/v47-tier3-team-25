@@ -33,7 +33,9 @@ const Navbar = () => {
         />
         <button
           type="button"
+
           className="ml-auto xl:hidden text-white text-2xl"
+
           onClick={toogleNavbar}
         >
           {' '}
@@ -42,17 +44,18 @@ const Navbar = () => {
       </div>
       {/* desktop navbar */}
       <div className="nav-desktop ">
+
         <div className="flex items-center  text-lg   gap-6 ">
           <Link href="/" className="bg-white px-8 py-1 rounded-full">
             Carlist
           </Link>
-          <Link
+            <Link
             href="/"
             className=" text-white bg-[#E11D48] px-8 py-1  rounded-full"
           >
             Compare
           </Link>
-          <Link href="/" className=" bg-white px-8 py-1 rounded-full">
+         <Link href="/" className=" bg-white px-8 py-1 rounded-full">
             More
           </Link>
         </div>
@@ -72,8 +75,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="/auth/login
-          "
+              href="/auth/login"
               className=" bg-white px-8  py-1 rounded-full"
             >
               Login
