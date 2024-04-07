@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import CategoryComponent from '@/components/CategoryComponent';
 import FilterSidebar from '@/components/FilterSidebar';
-import HeroCarousels from '@/components/HeroCarousels';
+import VideoCarousels from '@/components/VideoCarousels';
 import axios from 'axios';
 
 const page = () => {
@@ -43,7 +43,7 @@ const page = () => {
       <div className=" w-full h-auto  relative">
         <span className="z-20 absolute hexa w-full top-[-98.791px] sm:top-[-100px] rounded-tl-lg"></span>
         <div className="lg:mx-12">
-          <HeroCarousels />
+          <VideoCarousels />
         </div>
       </div>
       <div className="flex relative">
