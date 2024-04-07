@@ -12,6 +12,8 @@ import Image from 'next/image';
 import OurBusiness from '@/components/OurBusiness';
 
 import Navbar from '@/components/Navbar';
+import About from '@/components/About';
+import FeaturedComparison from '@/components/FeaturedComparison';
 
 export default function Home() {
   return (
@@ -26,6 +28,7 @@ export default function Home() {
         bgImage={HeroImage}
         link="carlist"
       />
+      <About />
       <Overview />
       <div className="md:px-20">
         <h4 className="text-center text-[30px] md:text-[60px] font-semibold capitalize">
@@ -63,6 +66,7 @@ export default function Home() {
       <div className="h-[300px] sm:h-[500px] lg:h-[800px] py-10">
         <VideoCarousels />
       </div>
+      <FeaturedComparison />
       <Footer />
     </main>
   );
