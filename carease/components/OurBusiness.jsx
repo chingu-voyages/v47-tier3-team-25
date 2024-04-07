@@ -29,7 +29,7 @@ const OurBusiness = () => {
       modules={[Pagination]}
       spaceBetween={50}
       // className="w-full h-[880px] lg:h-[713px] bg-yellow-200 my-10  px-6"
-      className="w-full h-[880px] lg:h-[713px] bg-gradient-to-b from-white to-[#908C8D] my-10 px-6 cursor-grab"      
+      className="w-full h-[880px] lg:h-[713px] bg-gradient-to-b from-white to-[#908C8D]  px-6 cursor-grab"
     >
       <SwiperSlide>
         <div className="mx-10 flex flex-col md:flex-row py-2 md:py-20 px-2 md:px-20 items-center">

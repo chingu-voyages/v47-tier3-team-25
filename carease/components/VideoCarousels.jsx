@@ -1,11 +1,7 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import Image from 'next/image';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import Button from './Button';
 
 const VideoCarousels = () => {
   return (
@@ -19,17 +15,17 @@ const VideoCarousels = () => {
         modules={[Autoplay]}
         spaceBetween={50}
         scrollbar={{ draggable: true }}
-        className=" "
+        className=" h-[800px] bg-gradient-to-b to-white from-[#908C8D]"
       >
         <SwiperSlide>
           <video
             width="720"
             height="240"
-            // controls
             autoPlay
             loop
-            className=" w-[100%] mx-auto lg:h-[700px] bg-cover"
+            className=" w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
             preload="auto"
+            muted
           >
             <source
               src="/videos/lamborgini_by_Video_by_Mustafa_Akkuş.mp4"
@@ -41,11 +37,11 @@ const VideoCarousels = () => {
           <video
             width="720"
             height="240"
-            // controls
             autoPlay
             loop
-            className="w-[100%] mx-auto lg:h-[700px] bg-cover"
-            // preload="auto"
+            className="w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
+            preload="auto"
+            muted
           >
             <source
               src="/videos/Pickup_truck_Video_by_Jorge_Zaldívar_Marroquín.mp4"
@@ -57,15 +53,14 @@ const VideoCarousels = () => {
           <video
             width="720"
             height="240"
-            // controls
             autoPlay
             loop
-            className="w-[100%] lg:h-[700px] mx-auto"
-            // preload="none"
-            src="/videos/RR_Video_by_Ammad_Rasool.mp4"
+            className="w-[100%] lg:h-[90%] rounded-[14%] mx-auto"
+            preload="auto"
+            muted
           >
             <source
-              src="/videos/FerrariVideo_by_Yash_Rao.mp4"
+              src="/videos/RR_Video_by_Ammad_Rasool.mp4"
               type="video/mp4"
             />
           </video>
