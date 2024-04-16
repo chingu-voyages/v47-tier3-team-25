@@ -17,8 +17,7 @@ import FeaturedComparison from '@/components/FeaturedComparison';
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
+    <main>      
       <Hero
         title="AVENTADOR SVJ"
         desc="The Revuelto is the beginning of a new era for Lamborghini, who has
