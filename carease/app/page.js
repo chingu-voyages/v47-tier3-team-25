@@ -18,8 +18,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <About />
-      <OurBusiness />
+      <About />      
       <div className="my-10 md:px-20 h-[1000px] sm:h-[600px] text-center mt-10">
         <h4 className="text-[30px] md:text-[60px] font-semibold ">
           Popular Brands

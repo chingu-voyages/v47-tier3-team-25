@@ -23,7 +23,8 @@ const VideoCarousels = () => {
             height="240"
             autoPlay
             loop
-            className=" w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
+            // className=" w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
+            className=" w-[100%] h-[100%] mx-auto bg-cover"
             preload="auto"
             muted
           >
@@ -39,7 +40,8 @@ const VideoCarousels = () => {
             height="240"
             autoPlay
             loop
-            className="w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
+            // className="w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
+            className=" w-[100%] mx-auto lg:h-[100%] bg-cover"
             preload="auto"
             muted
           >
@@ -55,7 +57,8 @@ const VideoCarousels = () => {
             height="240"
             autoPlay
             loop
-            className="w-[100%] lg:h-[90%] rounded-[14%] mx-auto"
+            // className="w-[100%] lg:h-[90%] rounded-[14%] mx-auto"
+            className=" w-[100%] mx-auto lg:h-[100%] bg-cover"
             preload="auto"
             muted
           >
