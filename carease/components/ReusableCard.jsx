@@ -11,17 +11,17 @@ const ReusableCard = ({model, categories}) => {
       <div className='flex flex-col mb-8 sm:px-2 lg:px-8'>
         {categories ? (
           <>
-            <div className='bg-[#d9d9d9] py-8 rounded-3xl md:px-8'>
-              <div className='text-left flex justify-center items-center md:flex md:justify-center md:w-[95%]'>
+            <div className='bg-[#d9d9d9] py-0 md:py-8 rounded-3xl md:px-8'>
+              <div className='text-left flex justify-around items-center md:flex md:w-[95%]'>
                 <Image
                   src={imageUrl}
                   width={150}          
                   alt=""
                   priority={false} 
-                  className='w-[60%] mt-16 md:mt-0'                                     
+                  className='w-[50%] mt-16 md:mt-0 md:w-[65%] lg:w-[60%]'                                     
                 />
                 <div>
-                  <h2 className='md:text-lg md:font-semibold'>{categories.name}</h2>        
+                  <h2 className='md:text-lg font-semibold md:-my-6'>{categories.name}</h2>        
                   <h3 className='md:hidden block pt-4'>View comparison</h3>                       
                 </div>                  
               </div> 
