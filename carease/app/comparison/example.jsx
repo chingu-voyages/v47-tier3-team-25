@@ -1,9 +1,6 @@
 import Categories from "@/components/Categories"
 import Image from 'next/image';
 import NumOne from '@/public/images/1.svg'
-import NumTwo from '@/public/images/2.svg'
-import NumThree from '@/public/images/3.svg'
-import NumFour from '@/public/images/4.svg'
 import IPhoneFrame01 from '@/public/images/iPhoneFrame-01.svg'
 import IPhoneFrame02 from '@/public/images/iPhoneFrame-02.svg'
 
@@ -12,18 +9,17 @@ const Comparison = () => {
     <>
       <Categories />
 
-      <section className='p-2 md:px-16'>
+      <section className='px-16'>
           <h1 className='my-8 text-2xl font-bold'>Already know what you’re looking for ?</h1>
-          <div className='flex flex-col text-sm sm:text-lg md:justify-center text-center text-[#312C2C]'>
+          <div className='flex flex-col py-8 md:flex-row md:justify-center text-center text-[#312C2C]'>
             
-            <div className="w-full py-8 md:px-12 flex justify-between items-center">
-              <div className="h-[50px] flex items-center gap-4">                
+            <div className="w-full flex justify-around items-center border-2 border-blue-500">
+              <div className="h-[50px] flex items-center gap-4 border-2 border-red-600">                
                 <Image 
                   src={NumOne}
                   width={20}
                   height={20}
-                  alt="numOne"  
-                  className="w-4 md:w-6"                
+                  alt="numOne"
                 />                
               
                 <h2>Search for cars that you’d like to compare</h2>
@@ -36,12 +32,14 @@ const Comparison = () => {
                 width={190}
                 height={385}
                 alt="imgOne"
-                className="lg:mr-40"
               />
             </div>
 
+          </div>
 
-            <div className="w-full py-8 flex justify-around items-center">
+          <div className='flex flex-col py-8 md:flex-row md:justify-center text-center text-[#312C2C]'>
+            
+            <div className="w-full flex justify-around items-center border-2 border-blue-500">
               
               <Image 
                 src={IPhoneFrame02}
@@ -52,45 +50,46 @@ const Comparison = () => {
 
               <div className="h-[50px] flex items-center gap-4">
                 <Image 
-                  src={NumTwo}
+                  src={NumOne}
                   width={20}
                   height={20}
-                  alt="numTwo"
-                  className="w-4 md:w-6" 
+                  alt="numOne"
                 />
                 <h2>Tap Compare. You’re done. No really, you are</h2>
               </div>
 
             </div>
 
+          </div>      
 
-            <div className="w-full py-8 flex justify-around items-center">
+          <div className='flex flex-col py-8 md:flex-row md:justify-center text-center text-[#312C2C]'>
+            
+            <div className="w-full flex justify-around items-center border-2 border-blue-500">
 
-              <div className="md:px-12 pt-4 flex items-start">                
+              <div className="h-[50px] flex items-center gap-4 border-2 border-red-600">                
                 <Image 
-                  src={NumThree}
+                  src={NumOne}
                   width={20}
                   height={20}
-                  alt="numThree"
-                  className="w-4 md:w-6" 
+                  alt="numOne"
                 />
                 <h2>A huge comparison table comes up, allowing you to compare components and specs for each car.</h2>
               </div>
 
-              <div className="md:px-12 pt-4 flex items-start">                
+              <div className="h-[50px] flex items-center gap-4 border-2 border-red-600">                
                 <Image 
-                  src={NumFour}
+                  src={NumOne}
                   width={20}
                   height={20}
-                  alt="numFour"           
-                  className="w-4 md:w-6"        
+                  alt="numOne"
                 />
                 <h2>Want to delve into a car more? Click on the boke’s  name to view-in-depth info, reviews, prices,specification, images and more.</h2>
               </div>
 
             </div>
 
-          </div>
+          </div> 
+
 
       </section>
     </>    
