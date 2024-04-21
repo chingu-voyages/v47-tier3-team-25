@@ -15,15 +15,15 @@ const VideoCarousels = () => {
         modules={[Autoplay]}
         spaceBetween={50}
         scrollbar={{ draggable: true }}
-        className=" h-[800px] bg-gradient-to-b to-white from-[#908C8D]"
+        className="h-full w-full bg-gradient-to-b to-white from-[#908C8D]"
       >
         <SwiperSlide>
           <video
             width="720"
             height="240"
             autoPlay
-            loop
-            className=" w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
+            loop            
+            className="h-full w-full object-cover"
             preload="auto"
             muted
           >
@@ -39,7 +39,7 @@ const VideoCarousels = () => {
             height="240"
             autoPlay
             loop
-            className="w-[100%] mx-auto lg:h-[90%] bg-cover rounded-[14%]"
+            className="h-full w-full object-cover"
             preload="auto"
             muted
           >
@@ -54,10 +54,10 @@ const VideoCarousels = () => {
             width="720"
             height="240"
             autoPlay
-            loop
-            className="w-[100%] lg:h-[90%] rounded-[14%] mx-auto"
+            loop                        
             preload="auto"
-            muted
+            muted            
+            className="h-full w-full object-cover"
           >
             <source
               src="/videos/RR_Video_by_Ammad_Rasool.mp4"

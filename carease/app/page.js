@@ -6,8 +6,6 @@ import mclarenLogo from '../public/images/mclaren-logo.png';
 import bmwLogo from '../public/images/bmw-logo.png';
 import maseratiLogo from '../public/images/maserati-logo.png';
 import LamborghiniLogo from '../public/images/Lamborghini-Logo.png';
-import HeroImage from '../public/images/Lambo-by-Abdulwahab-Alawadhi.svg';
-import HeroImage2 from '../public/images/Hero-2.svg';
 import Image from 'next/image';
 import OurBusiness from '@/components/OurBusiness';
 
@@ -19,22 +17,8 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero
-        title="AVENTADOR SVJ"
-        desc="The Revuelto is the beginning of a new era for Lamborghini, who has
-          harnessed the power of hybridization technology to create the first
-          HPEV (High Performance Electrified Vehicle)."
-        btnName="Explore More"
-        bgImage={HeroImage}
-        link="carlist"
-      />
-      <About />
-      <Overview />
-      <div className="md:px-20">
-        <h4 className="text-center text-[30px] md:text-[60px] font-semibold capitalize">
-          Available Cars
-        </h4>
-      </div>
+      <Hero />
+      <About />      
       <div className="my-10 md:px-20 h-[1000px] sm:h-[600px] text-center mt-10">
         <h4 className="text-[30px] md:text-[60px] font-semibold ">
           Popular Brands
@@ -53,17 +37,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="">
-        <Hero
-          title="MCLAREN 720S"
-          desc="A super-fast and stylish car that gives you an incredible driving experience"
-          btnName="Discover"
-          bgImage={HeroImage2}
-          link="carlist"
-        />
-      </div>
-      <OurBusiness />
-
       <FeaturedComparison />
       <div className="h-[300px] sm:h-[500px] lg:h-full ">
         <VideoCarousels />
