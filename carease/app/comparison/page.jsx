@@ -10,14 +10,25 @@ import IPhoneFrame02 from '@/public/images/iPhoneFrame-02.svg'
 const Comparison = () => {
   return (
     <>
+
+      {/* Section to display comparison */}
+      <section className='w-full h-[55vh] bg-[#d9d9d9] flex flex-col items-center justify-center gap-6'>
+        <h1 className='text-xl lg:text-2xl px-6 font-bold'>Your comparison is currently empty</h1>
+        <Image 
+            src="/images/comparison.png"
+            width="120"
+            height="120"                
+        />            
+      </section>
+
       <Categories />
 
       <section className='p-2 md:px-16'>
-          <h1 className='my-8 text-2xl font-bold'>Already know what you’re looking for ?</h1>
+          <h1 className='my-8 text-xl lg:text-2xl font-bold'>Already know what you’re looking for ?</h1>
           <div className='flex flex-col text-sm sm:text-lg md:justify-center text-center text-[#312C2C]'>
             
             <div className="w-full py-8 md:px-12 flex justify-between items-center">
-              <div className="h-[50px] flex items-center gap-4">                
+              <div className="h-[50px] flex items-start gap-4">                
                 <Image 
                   src={NumOne}
                   width={20}
@@ -41,7 +52,7 @@ const Comparison = () => {
             </div>
 
 
-            <div className="w-full py-8 flex justify-around items-center">
+            <div className="w-full py-8 flex justify-around items-start">
               
               <Image 
                 src={IPhoneFrame02}
@@ -50,7 +61,7 @@ const Comparison = () => {
                 alt="imgOne"
               />              
 
-              <div className="h-[50px] flex items-center gap-4">
+              <div className="h-[50px] flex items-start gap-4">
                 <Image 
                   src={NumTwo}
                   width={20}
@@ -85,7 +96,7 @@ const Comparison = () => {
                   alt="numFour"           
                   className="w-4 md:w-6"        
                 />
-                <h2>Want to delve into a car more? Click on the boke’s  name to view-in-depth info, reviews, prices,specification, images and more.</h2>
+                <h2>Want to delve into a car more? Click on the car’s name to view-in-depth info, reviews, prices,specification, images and more.</h2>
               </div>
 
             </div>
