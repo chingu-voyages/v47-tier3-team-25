@@ -10,6 +10,17 @@ import IPhoneFrame02 from '@/public/images/iPhoneFrame-02.svg'
 const Comparison = () => {
   return (
     <>
+
+      {/* Section to display comparison */}
+      <section className='w-full h-[55vh] bg-[#d9d9d9] flex flex-col items-center justify-center gap-6'>
+          <h1 className='text-2xl font-bold'>Your comparison is currently empty</h1>
+          <Image 
+              src="/images/comparison.png"
+              width="120"
+              height="120"                
+          />            
+      </section>
+
       <Categories />
 
       <section className='p-2 md:px-16'>

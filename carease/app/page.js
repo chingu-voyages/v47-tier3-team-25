@@ -65,8 +65,7 @@ export default function Home() {
       <div className="h-[300px] sm:h-[500px] lg:h-[800px] py-10">
         <VideoCarousels />
       </div>
-      <FeaturedComparison />
-      <Footer />
+      <FeaturedComparison />      
     </main>
   );
 }
