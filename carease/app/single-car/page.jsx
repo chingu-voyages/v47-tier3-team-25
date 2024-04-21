@@ -11,7 +11,7 @@ const Comparison = () => {
     <>
 
       {/* Section to display comparison */}
-      <section className='w-full h-[80vh] px-16 py-32 bg-[#d9d9d9]'>
+      <section className='w-full h-full px-16 py-32 bg-[#d9d9d9]'>
 
         <div className="flex items-center justify-between gap-6">
 
