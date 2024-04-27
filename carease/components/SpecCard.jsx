@@ -6,17 +6,17 @@ const SpecCard = () => {
 
   return (
     <>
-      <div className='flex flex-col mb-8 sm:px-2 lg:px-8'>
+      <div className='flex flex-col'>
         
           <>
-            <div className='bg-[#abadb0] p-6 rounded-md flex justify-center'>          
+            <div className='bg-black/[.50] py-8 rounded-md flex justify-around'>          
               <Image
                 src={imageUrl}
                 width={120}          
                 alt=""
                 priority={false}            
               />  
-              <h3 className='text-xl'>Something</h3>                  
+              <h3 className='text-xl text-white px-20'>Something</h3>                  
             </div>              
           </>          
         
