@@ -12,7 +12,7 @@ const Comparison = () => {
     <>
 
       {/* Section to display comparison */}
-      <section className='w-full h-[55vh] bg-[#d9d9d9] flex flex-col items-center justify-center gap-6'>
+      <section className='w-full h-[525px] bg-[#d9d9d9] flex flex-col items-center justify-center gap-6'>
         <h1 className='text-xl lg:text-2xl px-6 font-bold'>Your comparison is currently empty</h1>
         <Image 
             src="/images/comparison.png"
@@ -88,16 +88,20 @@ const Comparison = () => {
                 <h2>A huge comparison table comes up, allowing you to compare components and specs for each car.</h2>
               </div>
 
-              <div className="md:px-12 pt-4 flex items-start">                
-                <Image 
+            <div className="md:px-12 pt-4 flex items-start">
+              <div className="flex items-start gap-[5px]">
+                <Image
                   src={NumFour}
                   width={20}
                   height={20}
-                  alt="numFour"           
-                  className="w-4 md:w-6"        
+                  alt="numFour"
+                  className="w-4 md:w-6 mt-[4px]"
                 />
-                <h2>Want to delve into a car more? Click on the car’s name to view-in-depth info, reviews, prices,specification, images and more.</h2>
+                Want to delve into a car more? Click on the car’s name to
+                view-in-depth info, reviews, prices,specification, images and
+                more.
               </div>
+            </div>
 
             </div>
 
