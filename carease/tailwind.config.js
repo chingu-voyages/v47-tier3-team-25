@@ -16,14 +16,15 @@ module.exports = {
         pattern: 'url(/images/pattern.png)',
       },
       colors: {
+        primary: '#F14021',
         overlay_bg: '#14111169',
         btn_blue: '#AACBED',
-      },      
+      },
     },
     fontFamily: {
-      smallHeadings: ["Italiana", "sans-serif"],
-      bigHeadings: ["Gloock", "serif"],
-    }
+      smallHeadings: ['Italiana', 'sans-serif'],
+      bigHeadings: ['Gloock', 'serif'],
+    },
   },
   plugins: [],
 };
