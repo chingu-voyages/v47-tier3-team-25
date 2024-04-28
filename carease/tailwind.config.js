@@ -13,6 +13,7 @@ module.exports = {
         'carlist-hero': 'url(/images/carlist-hero.png)',
         'fp-bg-car': 'url(/fp-bg-car.jpg)',
         'single-car-bg': 'url(/images/bg-single-car.jpg)',
+        'single-car-sm': 'url(/images/bg-single-car-sm.png)',
         ellipse: 'url(/images/ellipse.svg)',
         pattern: 'url(/images/pattern.png)',
       },

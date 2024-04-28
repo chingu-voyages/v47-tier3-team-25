@@ -10,11 +10,11 @@ const Comparison = () => {
     <>
 
       {/* Section to display comparison */}
-      <section className='w-full h-screen bg-single-car-bg bg-cover bg-center'>
+      <section className='w-screen h-[100%] px-16 py-32 bg-single-car-sm lg:bg-single-car-bg bg-cover bg-center'>
 
-        <div className="w-full h-full backdrop-blur-sm px-16 py-32">
-          <div className="flex justify-end gap-3">
-            <div className="bg-[#707172] text-sm font-light p-1 w-[45%] flex justify-center gap-6 rounded-md">
+        {/* <div className="w-full h-full backdrop-blur-xs px-16 py-32"> */}
+          <div className="flex justify-center md:justify-end gap-3">
+            <div className="bg-[#707172] text-sm font-light p-1 lg:w-[50%] flex justify-center gap-6 lg:gap-3 rounded-md">
               <Link href="/" className="text-white px-2 py-1 rounded-md hover:bg-[#fff] hover:text-[#3f3f3f]">                      
                   Compare            
               </Link>
@@ -44,7 +44,7 @@ const Comparison = () => {
             </Link>
           </div>        
 
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col-reverse md:flex-row lg:items-center lg:justify-between">
 
             <VerticalMenu />
 
@@ -52,11 +52,11 @@ const Comparison = () => {
               src={SingleCar}
               width="450"
               height="300"
-              className="mr-28 mt-16 w-[500px]"
+              className="w-[350px] md:w-[500px] mx-auto mt-36 lg:mr-28 lg:border-2 lg:border-yellow-500"
             />       
 
           </div>
-        </div>
+        {/* </div> */}
                       
       </section>
 
