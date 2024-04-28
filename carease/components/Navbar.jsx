@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav ">
+    <nav className="nav text-lg">
       <Link href="/">
         <Image
           src="./images/carease-logo.svg"
@@ -33,7 +33,9 @@ const Navbar = () => {
         />
         <button
           type="button"
-          className="ml-auto xl:hidden text-white text-3xl"
+
+          className="ml-auto xl:hidden text-white text-2xl"
+
           onClick={toogleNavbar}
         >
           {' '}
@@ -42,17 +44,18 @@ const Navbar = () => {
       </div>
       {/* desktop navbar */}
       <div className="nav-desktop ">
-        <div className="flex items-center  text-xl text-bold  gap-6 ">
-          <Link href="/" className="bg-white px-8 py-1 rounded-2xl">
+
+        <div className="flex items-center  text-lg   gap-6 ">
+          <Link href="/" className="bg-white px-8 py-1 rounded-full">
             Carlist
           </Link>
-          <Link
+            <Link
             href="/"
-            className=" text-white bg-[#E11D48] px-8 py-1 rounded-2xl"
+            className=" text-white bg-[#E11D48] px-8 py-1  rounded-full"
           >
             Compare
           </Link>
-          <Link href="/" className=" bg-white px-8 py-1 rounded-2xl">
+         <Link href="/" className=" bg-white px-8 py-1 rounded-full">
             More
           </Link>
         </div>
@@ -66,15 +69,14 @@ const Navbar = () => {
             />
             <Link
               href="/auth/signup"
-              className=" bg-white px-8 py-1 rounded-2xl"
+              className=" bg-white px-8 py-1 rounded-full"
             >
               Register
             </Link>
 
             <Link
-              href="/auth/login
-          "
-              className=" bg-white px-8 py-1 rounded-2xl"
+              href="/auth/login"
+              className=" bg-white px-8  py-1 rounded-full"
             >
               Login
             </Link>
