@@ -41,10 +41,7 @@ const page = () => {
         </h2>
       </div>
       <div className=" w-full h-auto  relative">
-        <span className="z-20 absolute hexa w-full top-[-98.791px] sm:top-[-100px] rounded-tl-lg"></span>
-        <div className="lg:mx-12">
-          <VideoCarousels />
-        </div>
+        <span className="z-20 absolute hexa w-full top-[-98.791px] sm:top-[-90px] rounded-tl-lg"></span>
       </div>
       <div className="flex relative">
         <div className="w-[20%] h-full top-20 sticky mt-40 md:block hidden">

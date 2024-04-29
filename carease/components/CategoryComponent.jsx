@@ -1,35 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Card from './Card';
-import Image from 'next/image';
+
 import Link from 'next/link';
 
 const CategoryComponent = ({ carData, desc }) => {
-
   return (
-    <div className="mt-20 md:px-10">
-      <div className="mx-2 sm:mx-10">
+    <div className="my-20 md:px-10 mx-1">
+      <div className="mx-4 sm:mx-10">
         <div className="flex items-center justify-between font-normal ">
-          <h4 className="text-3xl md:text-[60px] ">{carData[0]?.category.toUpperCase()} </h4>
-          <Link href={`/category/${carData[0]?.category}`}>
-            <p>View All</p>
+          <h4 className="text-2xl md:text-4xl font-semibold">
+            {carData[0]?.category.toUpperCase()}{' '}
+          </h4>
+          <Link
+            href={`/category/${carData[0]?.category}`}
+            className="text-gray-700 hover:underline md:text-xl"
+          >
+            <p>View all</p>
           </Link>
         </div>
-        <p className=" mt-6 md:max-w-120">{desc}</p>
+        <p className="text-gray-500 mt-6 md:max-w-120 lg:text-lg">{desc}</p>
       </div>
       <div className="flex justify-around gap-20 flex-wrap">
-
         {carData.map((car) => {
-
           return (
-            <Card   
-              tag={car.category} 
-              imageUrl={car.imageUrl} 
-              model={car.model} 
+            <Card
+              tag={car.category}
+              imageUrl={car.imageUrl}
+              model={car.model}
               carId={car._id}
-            />            
-          )            
-        })}        
-        
+            />
+          );
+        })}
       </div>
     </div>
   );
