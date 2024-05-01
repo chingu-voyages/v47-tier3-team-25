@@ -9,14 +9,14 @@ const SpecCard = () => {
       <div className='flex flex-col'>
         
           <>
-            <div className='bg-black/[.50] py-8 rounded-md flex justify-around'>          
+            <div className='bg-black/[.50] px-5 md:px-12 lg:px-8 xl:px-16 py-8 rounded-md flex justify-around gap-6'>          
               <Image
                 src={imageUrl}
                 width={120}          
                 alt=""
-                priority={false}            
+                priority={false}                                            
               />  
-              <h3 className='text-xl text-white px-20'>Something</h3>                  
+              <h3 className='text-sm lg:text-xl text-white'>Something</h3>                  
             </div>              
           </>          
         
