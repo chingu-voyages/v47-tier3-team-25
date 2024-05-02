@@ -24,6 +24,7 @@ const CategoryComponent = ({ carData, desc }) => {
         {carData.map((car) => {
           return (
             <Card
+              key={car._id}
               tag={car.category}
               imageUrl={car.imageUrl}
               model={car.model}

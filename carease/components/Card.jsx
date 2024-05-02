@@ -3,16 +3,17 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import Button from './Button';
 import Link from 'next/link';
+import CompareCarModel from './CarSelectModal';
 
-import CompareCarModel from './CompareCarModel';
 const Card = ({ tag, imageUrl, model, carId }) => {
   const [show, setShow] = useState(false);
-  const handleModel = () => {
-    setShow(!show);
-  };
 
   return (
-    <div className="relative  md:w-[400px] flex flex-col text-center  flex-wrap my-6 mx-4 md:mx-0">
+    <div
+      className="relative  md:w-[400px] flex flex-col text-center  flex-wrap my-6 mx-4 md:mx-0"
+      onMouseLeave={() => setShow(false)}
+      
+    >
       <div className="mt-6 flex items-center  h-[400px] bg-[#D9D9D9] rounded-2xl relative px-4">
         <p className="uppercase text-center  bg-primary rounded-t-full w-[200px] mx-auto absolute bottom-0 pt-2 text-white left-[25%]">
           {tag}
@@ -35,13 +36,13 @@ const Card = ({ tag, imageUrl, model, carId }) => {
           />
         </Link>
         <Button
-          handleModel={handleModel}
+          handleModel={() => setShow(!show)}
           styleType={' bg-primary text-white'}
           name="Compare"
         />
       </div>
 
-      {show && <CompareCarModel handleModel={handleModel} />}
+      {show && <CompareCarModel carId={carId} model={model} />}
     </div>
   );
 };

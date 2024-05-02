@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import CategoryComponent from '@/components/CategoryComponent';
 import FilterSidebar from '@/components/FilterSidebar';
-import VideoCarousels from '@/components/VideoCarousels';
 import axios from 'axios';
 
 const page = () => {
@@ -10,26 +9,21 @@ const page = () => {
   const [superCars, setSuperCars] = useState([]);
   const [upcomingCars, setUpcomingCars] = useState([]);
   const [otherCars, setOtherCars] = useState([]);
+  const getCarList = async () => {
+    const response = await axios.get(
+      `/api/getTopThree/getTopThree/popular/supercars/upcoming/other`
+    );
+    const data = await response.data;
 
+    const { popularCarsData, superCarsData, upcomingCarsData, otherCarsData } =
+      data;
+
+    setPopularCars(popularCarsData);
+    setSuperCars(superCarsData);
+    setUpcomingCars(upcomingCarsData);
+    setOtherCars(otherCarsData);
+  };
   useEffect(() => {
-    const getCarList = async () => {
-      const response = await axios.get(
-        `/api/getTopThree/getTopThree/popular/supercars/upcoming/other`
-      );
-      const data = await response.data;
-
-      const {
-        popularCarsData,
-        superCarsData,
-        upcomingCarsData,
-        otherCarsData,
-      } = data;
-
-      setPopularCars(popularCarsData);
-      setSuperCars(superCarsData);
-      setUpcomingCars(upcomingCarsData);
-      setOtherCars(otherCarsData);
-    };
     getCarList();
   }, []);
 
