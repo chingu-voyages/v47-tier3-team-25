@@ -4,8 +4,6 @@ import React from 'react'
 
 const ReusableCard = ({model, categories}) => {
 
-  console.log('the cata is ', categories)
-
   return (
     <>
       <div className='flex flex-col mb-8 sm:px-2 lg:px-8'>
