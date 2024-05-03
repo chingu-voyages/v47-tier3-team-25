@@ -12,33 +12,31 @@ const Card = ({ tag, imageUrl, model, carId }) => {
   };
 
   return (
-    <div className="relative  md:w-[400px] flex flex-col text-center  flex-wrap my-6">
-      <div className="mt-6  h-[400px] bg-[#D9D9D9] rounded-2xl relative">
-        <div className="bg-[url('/images/ellipse.svg')] bg-no-repeat absolute top-[-50px] w-[150px] h-[80px] mx-[31%]">
-          <p className="uppercase text-center mt-12 ">{tag}</p>
-        </div>
+    <div className="relative  md:w-[400px] flex flex-col text-center  flex-wrap my-6 mx-4 md:mx-0">
+      <div className="mt-6 flex items-center  h-[400px] bg-[#D9D9D9] rounded-2xl relative px-4">
+        <p className="uppercase text-center  bg-primary rounded-t-full w-[200px] mx-auto absolute bottom-0 pt-2 text-white left-[25%]">
+          {tag}
+        </p>
 
-        <div className=" mt-[40%]">
-          <Image
-            src={imageUrl}
-            width={450}
-            height={400}
-            alt={model}
-            priority={false}
-          />
-        </div>
+        <Image
+          src={imageUrl}
+          width={450}
+          height={400}
+          alt={model}
+          priority={false}
+        />
       </div>
-      <p className="text-4xl my-4">{model}</p>
-      <div className="flex justify-around lg:justify-between ">
+      <p className=" text-2xl md:text-3xl my-4">{model}</p>
+      <div className="flex justify-between px-2 ">
         <Link href={`/car/${carId}`}>
           <Button
-            styleType={'bg-[#F14021] text-white border-none'}
+            styleType={'border-2 border-primary  text-primary '}
             name="View Model"
           />
         </Link>
         <Button
           handleModel={handleModel}
-          styleType={'border-2 border-[#D9D9D9]'}
+          styleType={' bg-primary text-white'}
           name="Compare"
         />
       </div>
