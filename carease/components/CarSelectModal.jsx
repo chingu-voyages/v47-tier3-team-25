@@ -1,24 +1,35 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import axios from 'axios';
 import Link from 'next/link';
+// import { useRouter } from 'next/router';
+import { redirect, useRouter } from 'next/navigation';
 
 const filter = createFilterOptions();
 
-export default function CompareCarModel({ carId }) {
-  const [carName, setCarName] = React.useState({ name: null, id: null });
-  const [cardata, setCarData] = React.useState([]);
-
+const CompareCarModel = ({ model, carId }) => {
+  const router = useRouter();
+  const [carName, setCarName] = useState({ name: null, id: null });
+  const [cardata, setCarData] = useState([]);
   const carData = async () => {
     const response = await axios.get(`/api/getCar`);
     const data = response.data;
     setCarData(data);
   };
-  React.useEffect(() => {
+  const redirectToComparisonPage = (carId, carNameId) => {
+    router.push(`/comparecar/${carId}/${carNameId}`);
+  };
+  const compareRoute = <Link href=""></Link>;
+  useEffect(() => {
     carData();
-  }, []);
-
+    if (carName.id) {
+      redirectToComparisonPage(carId, carName.id);
+    }
+  }, [carName.id]);
+  console.log(model, carId);
+  const handleClick = () => {};
+  console.log(carId, carName.id);
   return (
     <div className="absolute w-[60%] right-0 bottom-[-1rem] border-2 bg-white border-primary border-t-0 rounded-lg text-white outline-none">
       <Autocomplete
@@ -50,9 +61,15 @@ export default function CompareCarModel({ carId }) {
           return filtered;
         }}
         renderOption={(props, option) => (
-          <Link href={`/comparecar`} key={props.id} {...props}>
+          <li
+            // href="#"
+            // href={`/comparecar/${carId}/${option.id}`}
+            // onClick={handleClick}
+            key={props.id}
+            {...props}
+          >
             {option.model}
-          </Link>
+          </li>
         )}
         options={cardata}
         getOptionLabel={(option) => {
@@ -71,4 +88,5 @@ export default function CompareCarModel({ carId }) {
       />
     </div>
   );
-}
+};
+export default CompareCarModel;

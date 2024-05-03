@@ -7,14 +7,14 @@ import SearchBar from '@/components/SearchBar';
 import axios from 'axios';
 import { IoMdClose } from 'react-icons/io';
 
-const page = () => {
+const page = ({ params }) => {
   const [compareCarData, setCompareCarData] = useState({
     carA: {},
     carB: {},
   });
 
-  const carId_A = '65d600ed386cae91936855a7';
-  const carId_B = '65d5fea0386cae9193685592';
+  const carId_A = params.carId_A;
+  const carId_B = params.carId_B;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +23,7 @@ const page = () => {
       );
 
       const [carA, carB] = await response.data;
-      console.log(carA);
+
       setCompareCarData({
         carA: {
           category: carA.category,
@@ -109,7 +109,7 @@ const page = () => {
         <div className="flex  items-end h-[130px] sm:h-[200px] md:h-[280px] lg:h-[500px] relative mt-10">
           <button
             type="button"
-            className="absolute top-8 right-0 md:right-0 md:top-[6rem] lg:top-[12rem] text:lg sm:text-2xl"
+            className="absolute  top-8 right-0 md:right-0 md:top-[6rem] lg:top-[12rem] text:lg sm:text-2xl"
           >
             <IoMdClose />
           </button>
@@ -125,13 +125,17 @@ const page = () => {
       <div className="flex px-1 py-2 md:px-10 md:py-6 text-[10px] sm:text-[1rem] bg-gray-200  ">
         <ul className="flex gap-8 flex-col  px-2 capitalize font-semibold">
           {specifications.map((item, index) => {
-            return <li key={index}>{item}</li>;
+            return (
+              <li key={index} className="">
+                {item}
+              </li>
+            );
           })}
         </ul>
 
         <div
           className="flex flex-end
-         gap-8 justify-around w-full items-center "
+         md:gap-8 justify-around w-full items-center "
         >
           <ul className="flex gap-8 flex-col px-2">
             <li>{compareCarData?.carA.model}</li>
@@ -144,7 +148,7 @@ const page = () => {
             <li>{compareCarData?.carA.convenience}</li>
           </ul>
           {compareCarData.carB && (
-            <ul className="flex gap-8 flex-col  px-2">
+            <ul className="flex items-start gap-8 flex-col  px-2">
               <li>{compareCarData?.carB.model}</li>
               <li>{compareCarData?.carB.mpg}</li>
               <li>{compareCarData?.carB.engine}</li>
