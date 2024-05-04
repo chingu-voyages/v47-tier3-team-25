@@ -6,6 +6,7 @@ import SearchBar from '@/components/SearchBar';
 
 import axios from 'axios';
 import { IoMdClose } from 'react-icons/io';
+import CarSpecification from '@/components/CarSpecification';
 
 const page = ({ params }) => {
   const [compareCarData, setCompareCarData] = useState({
@@ -102,8 +103,8 @@ const page = ({ params }) => {
             src={compareCarData?.carA.imageUrl}
             width={200}
             height={200}
+            alt={compareCarData?.carB.model}
             className=" w-[100%] h-[60%]"
-            alt="mclaren"
           />
         </div>
         <div className="flex  items-end h-[130px] sm:h-[200px] md:h-[280px] lg:h-[500px] relative mt-10">
@@ -117,48 +118,56 @@ const page = ({ params }) => {
             src={compareCarData?.carB.imageUrl}
             width={200}
             height={200}
+            alt={compareCarData?.carB.model}
             className=" w-[100%] h-[60%]"
-            alt="mclaren"
           />
         </div>
       </div>
       <div className="flex px-1 py-2 md:px-10 md:py-6 text-[10px] sm:text-[1rem] bg-gray-200  ">
-        <ul className="flex gap-8 flex-col  px-2 capitalize font-semibold">
-          {specifications.map((item, index) => {
-            return (
-              <li key={index} className="">
-                {item}
-              </li>
-            );
-          })}
-        </ul>
-
         <div
           className="flex flex-end
-         md:gap-8 justify-around w-full items-center "
+         md:gap-8  w-full py-4 "
         >
-          <ul className="flex gap-8 flex-col px-2">
-            <li>{compareCarData?.carA.model}</li>
-            <li>{compareCarData?.carA.mpg}</li>
-            <li>{compareCarData?.carA.engine}</li>
-            <li>{compareCarData?.carA.fuelType}</li>
-            <li>{compareCarData?.carA.driveTrain}</li>
-            <li>{compareCarData?.carA.transmission}</li>
-            <li>{compareCarData?.carA.exterior}</li>
-            <li>{compareCarData?.carA.convenience}</li>
+          <ul className="flex gap-8 flex-col  px-2 capitalize font-semibold">
+            {specifications.map((item, index) => {
+              return (
+                <li className="h-10" key={index}>
+                  {item}
+                </li>
+              );
+            })}
           </ul>
-          {compareCarData.carB && (
-            <ul className="flex items-start gap-8 flex-col  px-2">
-              <li>{compareCarData?.carB.model}</li>
-              <li>{compareCarData?.carB.mpg}</li>
-              <li>{compareCarData?.carB.engine}</li>
-              <li>{compareCarData?.carB.fuelType}</li>
-              <li>{compareCarData?.carB.driveTrain}</li>
-              <li>{compareCarData?.carB.transmission}</li>
-              <li>{compareCarData?.carB.exterior}</li>
-              <li>{compareCarData?.carB.convenience}</li>
+          <div
+            className="flex sm:justify-around
+         md:gap-8  w-full  "
+          >
+            <ul className="flex gap-8 flex-col px-2">
+              <CarSpecification
+                model={compareCarData?.carA.model}
+                mpg={compareCarData?.carA.mpg}
+                engine={compareCarData?.carA.engine}
+                fuelType={compareCarData?.carA.fuelType}
+                driveTrain={compareCarData?.carA.driveTrain}
+                transmission={compareCarData?.carA.transmission}
+                exterior={compareCarData?.carA.exterior}
+                convenience={compareCarData?.carA.convenience}
+              />
             </ul>
-          )}
+            {compareCarData.carB && (
+              <ul className="flex items-start gap-8 flex-col  px-2">
+                <CarSpecification
+                  model={compareCarData?.carB.model}
+                  mpg={compareCarData?.carB.mpg}
+                  engine={compareCarData?.carB.engine}
+                  fuelType={compareCarData?.carB.fuelType}
+                  driveTrain={compareCarData?.carB.driveTrain}
+                  transmission={compareCarData?.carB.transmission}
+                  exterior={compareCarData?.carB.exterior}
+                  convenience={compareCarData?.carB.convenience}
+                />
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     </section>
