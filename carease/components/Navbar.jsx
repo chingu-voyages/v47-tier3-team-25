@@ -33,9 +33,7 @@ const Navbar = () => {
         />
         <button
           type="button"
-
           className="ml-auto xl:hidden text-white text-2xl"
-
           onClick={toogleNavbar}
         >
           {' '}
@@ -44,18 +42,17 @@ const Navbar = () => {
       </div>
       {/* desktop navbar */}
       <div className="nav-desktop ">
-
         <div className="flex items-center  text-lg   gap-6 ">
-          <Link href="/" className="bg-white px-8 py-1 rounded-full">
+          <Link href="/carlist" className="bg-white px-8 py-1 rounded-full">
             Carlist
           </Link>
-            <Link
-            href="/"
+          <Link
+            href="/comparison"
             className=" text-white bg-[#E11D48] px-8 py-1  rounded-full"
           >
             Compare
           </Link>
-         <Link href="/" className=" bg-white px-8 py-1 rounded-full">
+          <Link href="/carlist" className=" bg-white px-8 py-1 rounded-full">
             More
           </Link>
         </div>
@@ -88,13 +85,16 @@ const Navbar = () => {
       {show && (
         <div className="nav-mobile">
           <div className="flex items-center  flex-col xl:flex-row text-xl text-bold  gap-6 xl:ml-28">
-            <Link href="/" className="bg-white navlink">
+            <Link href="/carlist" className="bg-white navlink">
               Carlist
             </Link>
-            <Link href="/" className=" text-white bg-[#E11D48] navlink">
+            <Link
+              href="/comparison"
+              className=" text-white bg-[#E11D48] navlink"
+            >
               Compare
             </Link>
-            <Link href="/" className=" bg-white navlink">
+            <Link href="/carlist" className=" bg-white navlink">
               More
             </Link>
           </div>

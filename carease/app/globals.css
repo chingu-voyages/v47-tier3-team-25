@@ -11,11 +11,9 @@
 /* Font for entire html-body */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-
-
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;  
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
@@ -47,14 +45,14 @@
 }
 
 .nav {
-  @apply fixed top-0 w-full z-50 flex items-center justify-between px-6 sm:px-10  py-2 xl:py-2 text-black bg-gradient-to-t to-[#343131]/80 from-black/50  font-semibold;
+  @apply fixed top-0 w-full z-50 flex items-center justify-between px-6 sm:px-10  py-4 xl:py-2 text-black bg-gradient-to-t to-[#343131]/80 from-black/50  font-semibold;
 }
 .navlink {
-  @apply px-6 py-1  rounded-3xl w-full;
+  @apply py-1 w-full hover:scale-105 transition-all duration-150;
 }
 .nav-desktop {
   @apply hidden xl:flex justify-between xl:gap-20 py-3 lg:w-[74%] 2xl:w-[60%];
 }
 .nav-mobile {
-  @apply xl:hidden absolute top-20 z-30 flex flex-col gap-6  bg-gradient-to-t to-[#343131]/60 from-black p-6 sm:p-10 right-0 justify-center w-[60%] text-center xl:relative  xl:flex-row xl:w-[80%] xl:top-0 xl:bg-none;
+  @apply xl:hidden absolute top-16 z-30 flex flex-col gap-6  bg-gradient-to-t to-[#343131]/60 from-black px-6  py-6 right-0 justify-center w-[60%] text-center xl:relative  xl:flex-row xl:w-[80%] xl:top-0 xl:bg-none;
 }
