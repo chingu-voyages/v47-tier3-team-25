@@ -11,11 +11,12 @@ const CompareCarModel = ({ model, carId }) => {
   const router = useRouter();
   const [carName, setCarName] = useState({ name: null, id: null });
   const [cardata, setCarData] = useState([]);
-  const [error, setError] = useState(false);
   const carData = async () => {
     const response = await axios.get(`/api/getCar`);
     const data = response.data;
-    setCarData(data);
+    const filterdata = data.filter((item) => item.model !== model);
+
+    setCarData(filterdata);
   };
   const redirectToComparisonPage = (carId, carNameId) => {
     router.push(`/comparecar/${carId}/${carNameId}`);
@@ -87,11 +88,6 @@ const CompareCarModel = ({ model, carId }) => {
           freeSolo
         />
       </div>
-      {error && (
-        <div className="absolute bottom-12 right-4 px-4 py-1 rounded-lg  mt-5 bg-rose-700 border-gray-400 border-2 text-white">
-          select a different car
-        </div>
-      )}
     </>
   );
 };
