@@ -3,43 +3,32 @@ import Image from 'next/image';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import SUV from '../public/images/SUV.webp';
 import electricVehicle from '../public/images/Electric-SUV.webp';
 import commercialVehicle from '../public/images/commercial-vehicle.webp';
 import luxuryVehicle from '../public/images/luxury-vehicle.webp';
 const OurBusiness = () => {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      const items = [
-        'Passenger vehicles',
-        'Electric vehicles',
-        'Commercial vehicles',
-        'Luxury vehicles',
-      ];
-      console.log(className);
-      return `<span class='lg:font-bold lg:text-xl border-b-[40px] text-white border-b-[#000] pt-3 px-2 my-4 ${className} rounded-md flex'>${items[index]} </span>`;
-    },
-  };
+  
   return (
-    <Swiper
-      pagination={pagination}
-      modules={[Pagination]}
+    <Swiper      
+      modules={[Navigation]}
+      navigation
       spaceBetween={50}
-      className="w-full h-[880px] lg:h-[713px] bg-gradient-to-b from-white to-[#908C8D]  px-6 cursor-grab"
+      className="w-full h-full bg-gradient-to-b from-white to-[#908C8D] px-6 cursor-grab"
     >
       <SwiperSlide>
         <div className="mx-10 flex flex-col md:flex-row py-2 md:py-20 px-2 md:px-20 items-center">
           <div className="md:w-[50%] flex flex-col gap-10">
-            <h4 className="text-[30px] font-bigHeadings md:text-[60px] font-normal">
+            <h4 className="text-[30px] text-center sm:text-start font-headings tracking-tighter sm:text-[40px] md:text-[50px] font-normal">
               Our Business
             </h4>
-            <h5 className="text-3xl font-smallHeadings text-[#5B9CFF] font-semibold">
+            <h5 className="text-3xl font-headings text-[#5B9CFF] font-semibold">
               New forever
             </h5>
-            <p className="text-[1.1rem] sm:text-2xl max-w-[511px]">
+            <p className="text-[1.1rem] sm:text-2xl font-paragraphs max-w-[511px]">
               Cutting-edge designs, quest to excel and promise to delight
               customers keeps us ahead of the curve. Our cars and SUVs offer
               best-in-class safety and superior driving experience.
@@ -58,7 +47,7 @@ const OurBusiness = () => {
             />
           </div>
         </div>
-      </SwiperSlide>
+      </SwiperSlide>      
       <SwiperSlide>
         <div className="flex flex-col md:flex-row md:py-20 px-2 md:px-20 items-center ">
           <div className="md:w-[50%] flex flex-col gap-10">
@@ -140,8 +129,7 @@ const OurBusiness = () => {
             />
           </div>
         </div>
-      </SwiperSlide>
-      <div className=""></div>
+      </SwiperSlide>      
     </Swiper>
   );
 };

@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="h-[450px] md:h-[800px]">
       <div className="text-center mt-28 lg:w-[60%] mx-auto">
         <h1 className=" text-4xl lg:text-5xl mb-10">
-          <span className="text-[#E11D48]"> Search and compare</span> cars
+          <span className="text-[#E11D48] font-headings"> Search and compare</span> cars
         </h1>
         <div className="relative w-[60%] mx-auto">
           <input
