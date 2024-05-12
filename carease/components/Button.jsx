@@ -5,7 +5,7 @@ const Button = ({ name, styleType, handleModel }) => {
   return (
     <button
       onClick={handleModel}
-      className={`${styleType} rounded-[15.961px] py-2 px-6 font-semibold`}
+      className={`${styleType} rounded-[15.961px] lg:h-10 px-6 font-semibold`}
     >
       {name}{' '}
     </button>

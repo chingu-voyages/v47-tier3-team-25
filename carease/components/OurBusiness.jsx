@@ -30,7 +30,7 @@ const OurBusiness = () => {
         'Luxury vehicles',
       ];
       console.log(className);
-      return `<span class='lg:font-bold lg:text-xl border-b-[40px] text-white border-b-[#f14021] py-2 px-2 my-2 ${className} rounded-md'  >${items[index]} </span>`;
+      return `<span class='lg:font-bold lg:text-xl border-b-[40px] text-white border-b-[#000] pt-3 px-2 my-4 ${className} rounded-md flex'>${items[index]} </span>`;
     },
   };
   return (

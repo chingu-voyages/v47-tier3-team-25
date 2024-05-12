@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import CategoryComponent from '@/components/CategoryComponent';
 import FilterSidebar from '@/components/FilterSidebar';
-import HeroCarousels from '@/components/HeroCarousels';
 import axios from 'axios';
 
 const page = () => {
@@ -10,26 +9,21 @@ const page = () => {
   const [superCars, setSuperCars] = useState([]);
   const [upcomingCars, setUpcomingCars] = useState([]);
   const [otherCars, setOtherCars] = useState([]);
+  const getCarList = async () => {
+    const response = await axios.get(
+      `/api/getTopThree/getTopThree/popular/supercars/upcoming/other`
+    );
+    const data = await response.data;
 
+    const { popularCarsData, superCarsData, upcomingCarsData, otherCarsData } =
+      data;
+
+    setPopularCars(popularCarsData);
+    setSuperCars(superCarsData);
+    setUpcomingCars(upcomingCarsData);
+    setOtherCars(otherCarsData);
+  };
   useEffect(() => {
-    const getCarList = async () => {
-      const response = await axios.get(
-        `/api/getTopThree/getTopThree/popular/supercars/upcoming/other`
-      );
-      const data = await response.data;
-
-      const {
-        popularCarsData,
-        superCarsData,
-        upcomingCarsData,
-        otherCarsData,
-      } = data;
-
-      setPopularCars(popularCarsData);
-      setSuperCars(superCarsData);
-      setUpcomingCars(upcomingCarsData);
-      setOtherCars(otherCarsData);
-    };
     getCarList();
   }, []);
 
@@ -41,10 +35,7 @@ const page = () => {
         </h2>
       </div>
       <div className=" w-full h-auto  relative">
-        <span className="z-20 absolute hexa w-full top-[-98.791px] sm:top-[-100px] rounded-tl-lg"></span>
-        <div className="lg:mx-12">
-          <HeroCarousels />
-        </div>
+        <span className="z-20 absolute hexa w-full top-[-98.791px] sm:top-[-90px] rounded-tl-lg"></span>
       </div>
       <div className="flex relative">
         <div className="w-[20%] h-full top-20 sticky mt-40 md:block hidden">
