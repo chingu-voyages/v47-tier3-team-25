@@ -41,16 +41,16 @@
   width: 100%;
 }
 
-.swiper-pagination-bullets {
+/* .swiper-pagination-bullets {
   display: flex !important; 
   width: 100% !important; 
   margin: 0 !important;
-}
+} */
 
 .swiper-pagination-bullet {
   background: #000 !important;    
   width: 23.3% !important;
-  height: 40px;
+  /* height: 40px; */
   border-radius: 0% !important;
 }
 
