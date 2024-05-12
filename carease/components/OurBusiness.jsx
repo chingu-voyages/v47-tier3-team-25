@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
@@ -90,47 +90,96 @@ const OurBusiness = () => {
             <p className="text-[#7670BB] text-xl font-semibold">
               Discover commercial vehicles
             </p>
+
           </div>
-          <div className="md:w-[50%]  h-full">
-            <Image
-              src={commercialVehicle}
-              width={400}
-              height={400}
-              alt="suv"
-              className="w-full mt-20 md:mt-40"
-            />
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col md:flex-row md:py-20 px-2 md:px-20 items-center ">
+            <div className="md:w-[50%] flex flex-col gap-10">
+              <h4 className="text-[30px] md:text-[60px] font-semibold">
+                Our Business
+              </h4>
+              <h5 className="text-3xl text-[#5B9CFF] font-semibold">Go EV</h5>
+              <p className="text-2xl max-w-[511px]">
+                Step into the future of transportation with zero emissions, serene
+                journeys, and seamlessly connectd mobility
+              </p>
+              <p className="text-[#7670BB] text-xl font-semibold">
+                Discover electric vehicles
+              </p>
+            </div>
+            <div className="md:w-[50%]  h-full">
+              <Image
+                src={electricVehicle}
+                width={400}
+                height={400}
+                alt="suv"
+                className="w-full mt-20 md:mt-40"
+              />
+            </div>
           </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="flex flex-col md:flex-row md:py-20 px-2 md:px-20 items-center">
-          <div className="md:w-[50%] flex flex-col gap-10">
-            <h4 className="text-[30px] md:text-[60px] font-semibold">
-              Our Business
-            </h4>
-            <h5 className="text-3xl text-[#5B9CFF] font-semibold">
-              A Class Apart
-            </h5>
-            <p className="text-2xl max-w-[511px]">
-              We bring you global brands that define modern luxury and are
-              steeped in a rich legacy of timeless designs.
-            </p>
-            <p className="text-[#7670BB] text-xl font-semibold">
-              Discover luxury vehicles
-            </p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col md:flex-row md:py-20 px-2 md:px-20 items-center">
+            <div className="md:w-[50%] flex flex-col gap-10">
+              <h4 className="text-[30px] md:text-[60px] font-semibold">
+                Our Business
+              </h4>
+              <h5 className="text-3xl text-[#5B9CFF] font-semibold">
+                Going Strong
+              </h5>
+              <p className="text-2xl max-w-[511px]">
+                Our commercial vehicles rule the roads they run on. No terrain is
+                too challenging and no load too heavy
+              </p>
+              <p className="text-[#7670BB] text-xl font-semibold">
+                Discover commercial vehicles
+              </p>
+            </div>
+            <div className="md:w-[50%]  h-full">
+              <Image
+                src={commercialVehicle}
+                width={400}
+                height={400}
+                alt="suv"
+                className="w-full mt-20 md:mt-40"
+              />
+            </div>
           </div>
-          <div className="md:w-[50%]  h-full">
-            <Image
-              src={luxuryVehicle}
-              width={400}
-              height={400}
-              alt="suv"
-              className="w-full mt-20 md:mt-40"
-            />
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex flex-col md:flex-row md:py-20 px-2 md:px-20 items-center">
+            <div className="md:w-[50%] flex flex-col gap-10">
+              <h4 className="text-[30px] md:text-[60px] font-semibold">
+                Our Business
+              </h4>
+              <h5 className="text-3xl text-[#5B9CFF] font-semibold">
+                A Class Apart
+              </h5>
+              <p className="text-2xl max-w-[511px]">
+                We bring you global brands that define modern luxury and are
+                steeped in a rich legacy of timeless designs.
+              </p>
+              <p className="text-[#7670BB] text-xl font-semibold">
+                Discover luxury vehicles
+              </p>
+            </div>
+            <div className="md:w-[50%]  h-full">
+              <Image
+                src={luxuryVehicle}
+                width={400}
+                height={400}
+                alt="suv"
+                className="w-full mt-20 md:mt-40"
+              />
+            </div>
           </div>
-        </div>
-      </SwiperSlide>      
-    </Swiper>
+
+        </SwiperSlide>
+        <div className=""></div>
+      </Swiper>
+    )
+
   );
 };
 
