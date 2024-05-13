@@ -7,7 +7,7 @@ const VideoCarousels = () => {
   return (
     <>
       <Swiper
-        crossFade="true"
+        // crossFade="true"
         autoplay={{
           delay: 5500,
           disableOnInteraction: false,

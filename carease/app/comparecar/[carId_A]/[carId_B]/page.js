@@ -6,7 +6,9 @@ import SearchBar from '@/components/SearchBar';
 
 import axios from 'axios';
 import { IoMdClose } from 'react-icons/io';
+
 import CarSpecification from '@/components/CarSpecification';
+
 
 const page = ({ params }) => {
   const [compareCarData, setCompareCarData] = useState({
@@ -103,8 +105,10 @@ const page = ({ params }) => {
             src={compareCarData?.carA.imageUrl}
             width={200}
             height={200}
+
             alt={compareCarData?.carB.model}
             className=" w-[100%] h-[60%]"
+
           />
         </div>
         <div className="flex  items-end h-[130px] sm:h-[200px] md:h-[280px] lg:h-[500px] relative mt-10">
@@ -118,12 +122,15 @@ const page = ({ params }) => {
             src={compareCarData?.carB.imageUrl}
             width={200}
             height={200}
+
             alt={compareCarData?.carB.model}
             className=" w-[100%] h-[60%]"
+
           />
         </div>
       </div>
       <div className="flex px-1 py-2 md:px-10 md:py-6 text-[10px] sm:text-[1rem] bg-gray-200  ">
+
         <div
           className="flex flex-end
          md:gap-8  w-full py-4 "

@@ -8,10 +8,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        supercar: 'url(/images/supercar.png)',
+        'supercar': 'url(/images/supercar.png)',
         'signup-bg': 'url(/images/signup-bg.jpg)',
         'carlist-hero': 'url(/images/carlist-hero.png)',
         'fp-bg-car': 'url(/fp-bg-car.jpg)',
+        'single-car-bg': 'url(/images/bg-single-car.jpg)',
+        'single-car-sm': 'url(/images/bg-single-car-sm.png)',
         ellipse: 'url(/images/ellipse.svg)',
         pattern: 'url(/images/pattern.png)',
       },
@@ -22,8 +24,10 @@ module.exports = {
       },
     },
     fontFamily: {
-      smallHeadings: ['Italiana', 'sans-serif'],
-      bigHeadings: ['Gloock', 'serif'],
+      headings: ['Quicksand', 'sans-serif'],
+      paragraphs: ['Nunito Sans', 'sans-serif'],      
+      navItems: ['Trade Winds', 'system-ui']
+      
     },
   },
   plugins: [],
