@@ -41,9 +41,11 @@ const Navbar = () => {
         </button>
       </div>
       {/* desktop navbar */}
-      <div className="nav-desktop ">
+
+      <div className="nav-desktop font-navItems font-normal">
         <div className="flex items-center  text-lg   gap-6 ">
           <Link href="/carlist" className="bg-white px-8 py-1 rounded-full">
+
             Carlist
           </Link>
           <Link

@@ -24,8 +24,10 @@ module.exports = {
       },
     },
     fontFamily: {
-      smallHeadings: ['Italiana', 'sans-serif'],
-      bigHeadings: ['Gloock', 'serif'],
+      headings: ['Quicksand', 'sans-serif'],
+      paragraphs: ['Nunito Sans', 'sans-serif'],      
+      navItems: ['Trade Winds', 'system-ui']
+      
     },
   },
   plugins: [],
