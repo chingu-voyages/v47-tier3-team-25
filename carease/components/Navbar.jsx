@@ -29,11 +29,11 @@ const Navbar = () => {
           width={30}
           height={10}
           alt="compare-amount"
-          className="xl:hidden block"
+          className="md:hidden block"
         />
         <button
           type="button"
-          className="ml-auto xl:hidden text-white text-2xl"
+          className="ml-auto md:hidden text-white text-2xl"
           onClick={toogleNavbar}
         >
           {' '}
@@ -44,17 +44,17 @@ const Navbar = () => {
 
       <div className="nav-desktop font-navItems font-normal">
         <div className="flex items-center  text-lg   gap-6 ">
-          <Link href="/carlist" className="bg-white px-8 py-1 rounded-full">
+          <Link href="/carlist" className="bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8">
 
             Carlist
           </Link>
           <Link
             href="/comparison"
-            className=" text-white bg-[#E11D48] px-8 py-1  rounded-full"
+            className=" text-white bg-[#E11D48] px-8 py-1  rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
           >
             Compare
           </Link>
-          <Link href="/carlist" className=" bg-white px-8 py-1 rounded-full">
+          <Link href="/carlist" className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-8 xl:px-8">
             More
           </Link>
         </div>
@@ -62,20 +62,21 @@ const Navbar = () => {
           <div className="flex gap-6 items-center  ">
             <Image
               src="./images/compare-arrow-nav.svg"
-              width={40}
+              width={30}
               height={10}
               alt="compare-amount"
+              className='mx-4 lg:mx-8'
             />
             <Link
               href="/auth/signup"
-              className=" bg-white px-8 py-1 rounded-full"
+              className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
             >
               Register
             </Link>
 
             <Link
               href="/auth/login"
-              className=" bg-white px-8  py-1 rounded-full"
+              className=" bg-white px-8  py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
             >
               Login
             </Link>
