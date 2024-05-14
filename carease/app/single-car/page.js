@@ -19,7 +19,7 @@ const Comparison = () => {
   return (
     <>
       {/* Section to display comparison */}
-      <section className=" w-[100%] h-[100%] sm:px-4 lg:px-16 py-20 sm:py-32 px-1 bg-single-car-sm lg:bg-single-car-bg bg-cover bg-center">
+      <section className=" w-[100%] h-[100%] sm:px-4 lg:px-16 py-20 sm:py-16 lg:py-32 px-1 bg-single-car-sm lg:bg-single-car-bg bg-cover bg-center">
         <div
           className="relative flex flex-col justify-center md:justify-end items-end gap-3"
           onMouseLeave={() => setShow(false)}
