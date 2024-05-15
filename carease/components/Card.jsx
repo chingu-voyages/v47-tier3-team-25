@@ -14,7 +14,7 @@ const Card = ({ tag, imageUrl, model, carId }) => {
       onMouseLeave={() => setShow(false)}
     >
       <div className="mt-6 flex items-center  h-[400px] bg-[#D9D9D9] rounded-2xl relative px-4">
-        <p className="uppercase text-center  bg-primary rounded-t-full w-[200px] mx-auto absolute bottom-0 pt-2 text-white left-[25%]">
+        <p className="uppercase text-center  bg-primary rounded-bl-xl rounded-tr-xl   w-[200px]  absolute top-0 pt-2 pb-1 text-white right-0   text-sm mx-auto  ">
           {tag}
         </p>
 

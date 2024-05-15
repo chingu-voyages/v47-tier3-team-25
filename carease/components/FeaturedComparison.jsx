@@ -5,9 +5,9 @@ const FeaturedComparison = () => {
   return (
     <>
         <section className='py-20 px-10 bg-gradient-to-b from-white to-[#908C8D]'>
-            <h2 className='text-[30px] font-bigHeadings md:ml-10 md:text-[46px] md:mb-8 font-normal'>Featured Comparison</h2>
+            <h2 className='text-[30px] font-bigHeadings tracking-tighter sm:text-[40px] md:text-[45px] xl:text-[50px] font-normal sm:px-20'>Featured Comparison</h2>
 
-            <div className='md:flex justify-center text-center text-[#312C2C]'>
+            <div className='md:flex justify-center text-center text-[#312C2C] md:px-12 sm:px-20'>
                 <ReusableCard model="MCLAREN 720S" />
                 <ReusableCard model="MCLAREN 720S" />
                 <ReusableCard model="MCLAREN 720S" />
