@@ -64,12 +64,7 @@ export default function CompareCarModel({ carId }) {
           return filtered;
         }}
         renderOption={(props, option) => (
-          <Link
-            href=" "
-            // {`/comparecar`}
-            key={props.id}
-            {...props}
-          >
+          <Link href={`/comparecar`} key={props.id} {...props}>
             {option.model}
           </Link>
         )}
