@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import axios from 'axios';
+import Link from 'next/link';
 
 import { useRouter } from 'next/navigation';
 
@@ -38,7 +39,9 @@ const CompareCarModel = ({ model, carId }) => {
 
   return (
 
-    <div className="absolute w-[60%] right-0 bottom-[-1rem] border-none bg-white rounded-full  text-white outline-none ">
+
+    <div className="absolute w-[60%] right-0 bottom-[-1rem] lg:bottom-0 border-none bg-white rounded-full  text-white outline-none ">
+
       <Autocomplete
         sx={{
           '& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root': {
@@ -79,6 +82,7 @@ const CompareCarModel = ({ model, carId }) => {
                 title: `Add "${inputValue}"`,
               });
             }
+
           return filtered;
         }}
         renderOption={(props, option) => (
@@ -106,6 +110,7 @@ const CompareCarModel = ({ model, carId }) => {
         freeSolo
       />
     </div>
+
   );
 };
 export default CompareCarModel;
