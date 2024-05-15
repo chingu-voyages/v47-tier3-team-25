@@ -1,25 +1,43 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
 import axios from 'axios';
-import Link from 'next/link';
+
+import { useRouter } from 'next/navigation';
 
 const filter = createFilterOptions();
 
-export default function CompareCarModel({ carId }) {
-  const [carName, setCarName] = React.useState({ name: null, id: null });
-  const [cardata, setCarData] = React.useState([]);
-
+const CompareCarModel = ({ model, carId }) => {
+  const router = useRouter();
+  const [carName, setCarName] = useState({ name: null, id: null });
+  const [cardata, setCarData] = useState([]);
   const carData = async () => {
     const response = await axios.get(`/api/getCar`);
     const data = response.data;
-    setCarData(data);
+    const filterdata = data.filter((item) => item.model !== model);
+
+    setCarData(filterdata);
   };
-  React.useEffect(() => {
+  const redirectToComparisonPage = (carId, carNameId) => {
+    router.push(`/comparecar/${carId}/${carNameId}`);
+  };
+
+  useEffect(() => {
     carData();
-  }, []);
+
+    if (carName.name === model) {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
+    }
+    if (carName.id && !(carName.name === model)) {
+      redirectToComparisonPage(carId, carName.id);
+    }
+  }, [carName.id]);
 
   return (
+
     <div className="absolute w-[60%] right-0 bottom-[-1rem] border-none bg-white rounded-full  text-white outline-none ">
       <Autocomplete
         sx={{
@@ -50,23 +68,22 @@ export default function CompareCarModel({ carId }) {
           const filtered = filter(options, params);
           const { inputValue } = params;
 
-          const isExisting = options.some(
-            (option) => inputValue === option.model
-          );
 
-          if (inputValue !== '' && !isExisting) {
-            filtered.push({
-              inputValue,
-              title: `Add "${inputValue}"`,
-            });
-          }
+            const isExisting = options.some(
+              (option) => inputValue === option.model
+            );
 
+            if (inputValue !== '' && !isExisting) {
+              filtered.push({
+                inputValue,
+                title: `Add "${inputValue}"`,
+              });
+            }
           return filtered;
         }}
         renderOption={(props, option) => (
           <Link
-            href=" "
-            // {`/comparecar`}
+            href={`/comparecar`}
             key={props.id}
             {...props}
           >
@@ -90,4 +107,5 @@ export default function CompareCarModel({ carId }) {
       />
     </div>
   );
-}
+};
+export default CompareCarModel;
