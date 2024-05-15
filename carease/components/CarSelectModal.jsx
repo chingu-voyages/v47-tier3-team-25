@@ -37,22 +37,37 @@ const CompareCarModel = ({ model, carId }) => {
   }, [carName.id]);
 
   return (
-    <>
-      <div className="absolute w-[60%] right-0 bottom-[-1rem] border-2 bg-white border-primary border-t-0 rounded-lg text-white outline-none">
-        <Autocomplete
-          value={carName.name}
-          onChange={(event, newValue) => {
-            if (typeof newValue === 'string') {
-              setValue(newValue);
-            } else if (newValue && newValue.inputValue) {
-              setValue(newValue.inputValue);
-            } else {
-              setCarName({ name: newValue?.model, id: newValue?.id });
-            }
-          }}
-          filterOptions={(options, params) => {
-            const filtered = filter(options, params);
-            const { inputValue } = params;
+
+    <div className="absolute w-[60%] right-0 bottom-[-1rem] lg:bottom-0 border-none bg-white rounded-full  text-white outline-none ">
+      <Autocomplete
+        sx={{
+          '& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root': {
+            borderRadius: '100px',
+            padding: '4px 1px 8px 0',
+          },
+          '& .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused': {
+            color: 'black',
+          },
+          '& .css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline, .css-1d3z3hw-MuiOutlinedInput-notchedOutline ,.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline':
+            {
+              borderRadius: '100px',
+              borderColor: '#F14021',
+            },
+        }}
+        value={carName.name}
+        onChange={(event, newValue) => {
+          if (typeof newValue === 'string') {
+            setValue(newValue);
+          } else if (newValue && newValue.inputValue) {
+            setValue(newValue.inputValue);
+          } else {
+            setCarName({ name: newValue?.model, id: newValue?.id });
+          }
+        }}
+        filterOptions={(options, params) => {
+          const filtered = filter(options, params);
+          const { inputValue } = params;
+
 
             const isExisting = options.some(
               (option) => inputValue === option.model
@@ -87,8 +102,7 @@ const CompareCarModel = ({ model, carId }) => {
           )}
           freeSolo
         />
-      </div>
-    </>
+      </div>    
   );
 };
 export default CompareCarModel;

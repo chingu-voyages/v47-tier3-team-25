@@ -39,8 +39,7 @@ const Card = ({ tag, imageUrl, model, carId }) => {
           styleType={' bg-primary text-white'}
           name="Compare"
         />
-      </div>
-
+      </div>{' '}
       {show && <CompareCarModel carId={carId} model={model} />}
     </div>
   );
