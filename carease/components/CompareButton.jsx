@@ -3,6 +3,7 @@ import Button from './Button';
 
 const CompareButton = ({ handleclick }) => {
   return (
+    // Compare Button
     <>
       {' '}
       <button
