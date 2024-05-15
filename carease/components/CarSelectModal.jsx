@@ -38,7 +38,7 @@ const CompareCarModel = ({ model, carId }) => {
 
   return (
 
-    <div className="absolute w-[60%] right-0 bottom-[-1rem] border-none bg-white rounded-full  text-white outline-none ">
+    <div className="absolute w-[60%] right-0 bottom-[-1rem] lg:bottom-0 border-none bg-white rounded-full  text-white outline-none ">
       <Autocomplete
         sx={{
           '& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root': {
@@ -102,8 +102,7 @@ const CompareCarModel = ({ model, carId }) => {
           )}
           freeSolo
         />
-      </div>
-    </>
+      </div>    
   );
 };
 export default CompareCarModel;
