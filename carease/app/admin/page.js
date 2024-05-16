@@ -1,11 +1,26 @@
+"use client"
 import VerticalMenu from '@/components/VerticalMenu';
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import imageUrl from '../../public/images/Mclaren-720S.png'
 import Image from 'next/image';
 import Button from '@/components/Button';
+import axios from 'axios';
 
 const page = () => {
+
+  const [carsList, setCarsList] = useState([])
+
+  useEffect(() => {
+    const getAllcategories = async () => {
+      const cars = await axios.get(`/api/getAllCars`);
+      setCarsList(cars.data);
+    };
+
+    getAllcategories()
+
+  }, [])
+
   return (
     
     <section className=" w-[100%] h-[100%] sm:px-4 lg:px-16 py-20 sm:py-16 lg:py-32 px-1">
@@ -41,55 +56,28 @@ const page = () => {
           <VerticalMenu />
 
           <div>
-            <table class="table-fixed">
+            <table className="table-fixed">
                 <thead>
-                    <tr>
-                        <th>#</th>
+                    <tr>                        
                         <th>Category name</th>                    
                         <th>Action</th>                    
                         <th>Action</th>                    
                     </tr>
                 </thead>
+
                 <tbody>
-                    <tr className='hover:bg-blue-100'>
-                        <td className='p-8'>
-                            <Image
-                                src={imageUrl}
-                                width={120}          
-                                alt=""
-                                priority={false}                                            
-                            />
-                        </td>
-                        <td className='p-8'>Malcolm Lockyer</td>                        
+                  
+                  {carsList.map((car) => {
+                    return (
+                        <tr className='hover:bg-blue-100'>                        
+                        <td className='p-8'>{car}</td>                        
                         <td className='p-8'>Remove</td>
                         <td className='p-8'>Update</td>
-                    </tr>
-                    <tr className='hover:bg-blue-100'>
-                        <td className='p-8'>
-                            <Image
-                                src={imageUrl}
-                                width={120}          
-                                alt=""
-                                priority={false}                                            
-                            />
-                        </td>
-                        <td className='p-8'>Malcolm Lockyer</td>
-                        <td className='p-8'>Remove</td>
-                        <td className='p-8'>Update</td>
-                    </tr>
-                    <tr className='hover:bg-blue-100'>
-                        <td className='p-8'>
-                            <Image
-                                src={imageUrl}
-                                width={120}          
-                                alt=""
-                                priority={false}                                            
-                            />
-                        </td>
-                        <td className='p-8'>Malcolm Lockyer</td>
-                        <td className='p-8'>Remove</td>
-                        <td className='p-8'>Update</td>
-                    </tr>
+                      </tr>
+                    )
+                    
+                  })}
+                    
                 </tbody>
             </table>
           </div>
