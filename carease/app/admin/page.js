@@ -12,12 +12,13 @@ const page = () => {
   const [carsList, setCarsList] = useState([])
 
   useEffect(() => {
-    const getAllcategories = async () => {
+    const getAllCategories = async () => {
       const cars = await axios.get(`/api/getAllCars`);
+
       setCarsList(cars.data);
     };
 
-    getAllcategories()
+    getAllCategories()
 
   }, [])
 
