@@ -38,12 +38,11 @@ const CompareCarModel = ({ model, carId }) => {
   }, [carName.id]);
 
   return (
-
-
-    <div className="absolute w-[60%] right-0 bottom-[-1rem] lg:bottom-0 border-none bg-white rounded-full  text-white outline-none ">
-
+    // <div className="absolute w-[60%] right-0 bottom-[-1rem] lg:bottom-0 border-none bg-white rounded-full  text-white outline-none ">
+    <>
       <Autocomplete
         sx={{
+          padding: 'rem',
           '& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root': {
             borderRadius: '100px',
             padding: '4px 1px 8px 0',
@@ -71,26 +70,21 @@ const CompareCarModel = ({ model, carId }) => {
           const filtered = filter(options, params);
           const { inputValue } = params;
 
+          const isExisting = options.some(
+            (option) => inputValue === option.model
+          );
 
-            const isExisting = options.some(
-              (option) => inputValue === option.model
-            );
-
-            if (inputValue !== '' && !isExisting) {
-              filtered.push({
-                inputValue,
-                title: `Add "${inputValue}"`,
-              });
-            }
+          if (inputValue !== '' && !isExisting) {
+            filtered.push({
+              inputValue,
+              title: `Add "${inputValue}"`,
+            });
+          }
 
           return filtered;
         }}
         renderOption={(props, option) => (
-          <Link
-            href={`/comparecar`}
-            key={props.id}
-            {...props}
-          >
+          <Link href={`/comparecar`} key={props.id} {...props}>
             {option.model}
           </Link>
         )}
@@ -109,8 +103,7 @@ const CompareCarModel = ({ model, carId }) => {
         )}
         freeSolo
       />
-    </div>
-
+    </>
   );
 };
 export default CompareCarModel;
