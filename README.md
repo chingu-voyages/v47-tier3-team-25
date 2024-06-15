@@ -3,7 +3,8 @@
 ## Overview 
 CarEase is a Fullstack web app built with NextJs. It is a platform for the car enthusiasts to browse the listed cars and compare them so that they can make the best decision while purchasing their dream car. This team-project was developed as a part of Chingu-Voyage-47.
 
-### CHECK IT LIVE [Click here](https://carease-25.vercel.app/)
+## CHECK IT LIVE (version 2) [Click here](https://carease.vercel.app/)
+### CHECK IT LIVE (version 1) [Click here](https://carease-25.vercel.app/)
 
 ## How to run locally :
 
