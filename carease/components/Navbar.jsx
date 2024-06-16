@@ -43,7 +43,7 @@ const Navbar = () => {
       {/* desktop navbar */}
 
       <div className="nav-desktop font-navItems font-normal">
-        <div className="flex items-center  text-lg   gap-6 ">
+        <div className="flex items-center  text-lg gap-6 ">
           <Link
             href="/carlist"
             className="bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
