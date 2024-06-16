@@ -40,7 +40,11 @@ const Card = ({ tag, imageUrl, model, carId }) => {
           name="Compare"
         />
       </div>{' '}
-      {show && <CompareCarModel carId={carId} model={model} />}
+      {show && (
+        <div className="absolute w-[60%] right-0 bottom-[-1rem] lg:bottom-0 border-none bg-white rounded-full  text-white outline-none ">
+          <CompareCarModel carId={carId} model={model} />
+        </div>
+      )}
     </div>
   );
 };
