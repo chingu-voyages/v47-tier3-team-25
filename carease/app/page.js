@@ -15,6 +15,7 @@ export default function Home() {
       <div className="h-[300px] sm:h-[500px] lg:h-full ">
         <VideoCarousels />
       </div>
+      <Footer />
     </main>
   );
 }

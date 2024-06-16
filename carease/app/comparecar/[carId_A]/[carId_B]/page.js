@@ -18,14 +18,7 @@ const page = ({ params }) => {
     carId_A: params.carId_A,
     carId_B: params.carId_B,
   });
-  // const carId_A = params.carId_A;
-  // const carId_B = params.carId_B;
 
-  // const getCarList = async () => {
-  //   const response = await axios.get(`/api/getCar`);
-  //   const data = await response.data;
-  //   setCarData(data);
-  // };
   console.log(carId.carId_A, carId.carId_B);
   console.log();
   const handleClick = (e) => {
@@ -33,33 +26,6 @@ const page = ({ params }) => {
   };
   useEffect(() => {
     const fetchData = async () => {
-      // if (!(parseInt(carId.carId_A) && carId.carId_B)) {
-      //   console.log(1, carId.carId_A, carId.carId_B);
-      //   console.log('hello');
-      //   const response = await axios.get(
-      //     `/api/getCar/65d5fd23386cae919368558a`
-      //   );
-      //   console.log(response.data);
-      //   const carA = response.data;
-      //   setCompareCarData({
-      //     carA: {
-      //       category: carA.category,
-      //       model: carA.model,
-      //       imageUrl: carA.imageUrl,
-      //       mpg: carA.specifications.mpg,
-      //       engine: carA.specifications.engine,
-      //       fuelType: carA.specifications.fuel_type,
-      //       driveTrain: carA.specifications.drivetrain,
-      //       exterior: carA.specifications.exterior,
-      //       exteriorColor: carA.specifications.exterior_color,
-      //       interiorColor: carA.specifications.interior_color,
-      //       transmission: carA.specifications.transmission,
-      //       convenience: carA.specifications.convenience,
-      //     },
-      //     carB: null,
-      //   });
-      // } else {
-      // };
       const response = await axios.get(
         `/api/compareCars/compare/${carId.carId_A}/${carId.carId_B}`
       );
