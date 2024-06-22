@@ -30,7 +30,7 @@ const page = () => {
   return (
     <section>
       <div className="relative bg-carlist-hero w-full h-[648px] bg-cover">
-        <h2 className="absolute top-[30%] h-full text-6xl  sm:text-7xl mx-auto ml-2 lg:ml-20 text-white lg:max-w-[500px]">
+        <h2 className="absolute top-[30%] h-full text-2xl  sm:text-6xl mx-auto ml-2 lg:ml-20 text-white lg:max-w-[500px]">
           EXPLORE THE CAREASE MODELS
         </h2>
       </div>

@@ -4,6 +4,7 @@ import VideoCarousels from '@/components/VideoCarousels';
 import About from '@/components/About';
 import FeaturedComparison from '@/components/FeaturedComparison';
 import PopularBrands from '@/components/PopularBrands';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (

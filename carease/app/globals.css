@@ -55,7 +55,7 @@
 }
 
 .nav {
-  @apply fixed top-0 w-full z-50 flex items-center justify-between px-6 sm:px-10  py-4 xl:py-2 text-black bg-gradient-to-t to-[#343131]/80 from-black/50  font-semibold;
+  @apply fixed top-0 w-full z-40 flex items-center justify-between px-6 sm:px-10  py-4 xl:py-2 text-black bg-gradient-to-t to-[#343131]/80 from-black/50  font-semibold;
 }
 .navlink {
   @apply py-1 w-full hover:scale-105 transition-all duration-150;

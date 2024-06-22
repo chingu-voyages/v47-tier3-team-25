@@ -22,10 +22,9 @@ const VideoCarousels = () => {
             width="720"
             height="240"
             autoPlay
-            lazy
             loop
             className="h-full w-full object-cover"
-            preload="auto"
+            preload="none"
             muted
           >
             <source
@@ -39,10 +38,9 @@ const VideoCarousels = () => {
             width="720"
             height="240"
             autoPlay
-            lazy
             loop
             className="h-full w-full object-cover"
-            preload="auto"
+            preload="none"
             muted
           >
             <source
@@ -56,9 +54,8 @@ const VideoCarousels = () => {
             width="720"
             height="240"
             autoPlay
-            lazy
             loop
-            preload="auto"
+            preload="none"
             muted
             className="h-full w-full object-cover"
           >

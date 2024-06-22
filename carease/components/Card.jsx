@@ -28,7 +28,7 @@ const Card = ({ tag, imageUrl, model, carId }) => {
       </div>
       <p className=" text-2xl md:text-3xl my-4">{model}</p>
       <div className="flex justify-between px-2 ">
-        <Link href={`/car/${carId}`}>
+        <Link href={`/single-car/${carId}`}>
           <Button
             styleType={'border-2 border-primary  text-primary '}
             name="View Model"
