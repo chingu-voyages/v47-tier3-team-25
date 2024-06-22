@@ -30,12 +30,12 @@ const page = () => {
   };
 
   return (
-    <section className="flex flex-col sm:flex-row bg-signup-bg bg-cover h-[100%] text-white py-6 px-4 tracking-wide">
-      <div className="mx-auto my-6 sm:my-auto sm:order-last">
-        <h3 className="text-2xl text-center md:text-left mb-6 lg:mb-0">
-          Sign Up
+    <section className="flex flex-col sm:flex-row bg-signup-bg bg-cover h-[100%] text-white pt-24 py-6 px-4 tracking-wide ">
+      <div className="mx-auto my-6 pt-28 sm:order-last sm:text-white bg-overlay_bg h-72 px-6 text-black">
+        <h3 className="text-3xl text-center md:text-left  mb-6 lg:mb-0 font-bold">
+          Register
         </h3>
-        <p className="sm:text-white text-black font-semibold">
+        <p className=" font-semibold">
           Unlock a Seamless Car Buying Experience: Create Your Account Today
         </p>
       </div>
@@ -54,7 +54,7 @@ const page = () => {
           <h4 className="text-[28px] font-semibold">Create Account</h4>
 
           <p className="text-[13.5px]">
-            Sign up here for a personalized car shopping experience
+            Register here for a personalized experience
           </p>
           <div className="flex flex-col gap-6">
             <button className="flex gap-2 border-2  w-full justify-center py-2 rounded-md text-lg">

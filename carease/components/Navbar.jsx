@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="nav text-lg">
       <Link href="/">
         <Image
-          src="./images/carease-logo.svg"
+          src="/images/carease-logo.svg"
           width={150}
           height={150}
           alt="carease"
@@ -25,7 +25,7 @@ const Navbar = () => {
       </Link>
       <div className="flex items-center gap-10">
         <Image
-          src="./images/compare-arrow-nav.svg"
+          src="/images/compare-arrow-nav.svg"
           width={30}
           height={10}
           alt="compare-amount"
@@ -43,9 +43,11 @@ const Navbar = () => {
       {/* desktop navbar */}
 
       <div className="nav-desktop font-navItems font-normal">
-        <div className="flex items-center  text-lg   gap-6 ">
-          <Link href="/carlist" className="bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8">
-
+        <div className="flex items-center  text-lg gap-6 ">
+          <Link
+            href="/carlist"
+            className="bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
+          >
             Carlist
           </Link>
           <Link
@@ -54,18 +56,21 @@ const Navbar = () => {
           >
             Compare
           </Link>
-          <Link href="/carlist" className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-8 xl:px-8">
+          <Link
+            href="/carlist"
+            className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-8 xl:px-8"
+          >
             More
           </Link>
         </div>
         <div className="xl:ml-auto">
           <div className="flex gap-6 items-center  ">
             <Image
-              src="./images/compare-arrow-nav.svg"
+              src="/images/compare-arrow-nav.svg"
               width={30}
               height={10}
               alt="compare-amount"
-              className='mx-4 lg:mx-8'
+              className="mx-4 lg:mx-8"
             />
             <Link
               href="/auth/signup"
