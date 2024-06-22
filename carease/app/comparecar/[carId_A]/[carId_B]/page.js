@@ -13,17 +13,11 @@ const page = ({ params }) => {
     carA: {},
     carB: {},
   });
-  const [carData, setCarData] = useState([]);
   const [carId, setCarId] = useState({
     carId_A: params.carId_A,
     carId_B: params.carId_B,
   });
 
-  console.log(carId.carId_A, carId.carId_B);
-  console.log();
-  const handleClick = (e) => {
-    setCarId({ carId_B: e });
-  };
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
@@ -83,7 +77,11 @@ const page = ({ params }) => {
         <div className="relative flex flex-wrap gap-4 w-[100%] lg:w-[90%] my-10 items-center mx-2">
           <div className=" w-[90%] sm:w-[50%] text-[10px] md:text-2xl border-none bg-white rounded-full  text-white outline-none ">
             <CarSelectModal
-              model={carData?.model}
+              model={
+                carId.carId_A
+                  ? compareCarData?.carA.model
+                  : compareCarData?.carA.model
+              }
               carId={carId.carId_A ? carId.carId_A : carId.carId_B}
             />
           </div>

@@ -9,9 +9,9 @@ import logo from '@/public/images/logo.svg';
 const Footer = () => {
   return (
     <section className=" relative  w-full bg-black  text-white">
-      <div className="flex flex-col gap-6 md:flex-row md:h-[632px] md:text-left text-center">
+      <div className="flex flex-col gap-6 md:flex-row md:h-[500px] md:text-left text-center">
         <div className="md:w-[60%] py-24 md:px-28 md:text-left text-center">
-          <h4 className="uppercase mb-10 text-3xl">CarEase Corperate</h4>
+          <h4 className="uppercase mb-10 text-2xl">CarEase Corperate</h4>
           <div className="flex flex-col gap-6 md:flex-row justify-between md:mr-10">
             <div>
               <ul className="flex flex-col gap-8">
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="bg-[#2B3237] md:w-[40%] px-24 py-24 h-full ">
-          <h4 className="uppercase text-3xl mb-10">Contact</h4>
+          <h4 className="uppercase text-2xl mb-10">Contact</h4>
           <div>
             <ul className="flex flex-col gap-8 mb-8">
               {[

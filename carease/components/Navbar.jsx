@@ -43,7 +43,7 @@ const Navbar = () => {
       {/* desktop navbar */}
 
       <div className="nav-desktop font-navItems font-normal">
-        <div className="flex items-center  text-lg gap-6 ">
+        <div className="flex items-center  text-lg gap-6 relative">
           <Link
             href="/carlist"
             className="bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
@@ -56,12 +56,23 @@ const Navbar = () => {
           >
             Compare
           </Link>
-          <Link
-            href="/carlist"
+          <button
             className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-8 xl:px-8"
+            onClick={() => setShow(!show)}
           >
             More
-          </Link>
+          </button>
+          {show && (
+            <div
+              className="absolute bg-gradient-to-t to-[#343131]/80 from-black/50  text-white flex flex-col right-0 top-10 z-80 px-8 rounded-md py-8 shadow-xl gap-4"
+              onMouseLeave={() => setShow(false)}
+            >
+              <Link href="">Super Cars</Link>
+              <Link href="">Popular Cars</Link>
+              <Link href="">Upcoming Cars</Link>
+              <Link href="">Other Cars</Link>
+            </div>
+          )}
         </div>
         <div className="xl:ml-auto">
           <div className="flex gap-6 items-center  ">
