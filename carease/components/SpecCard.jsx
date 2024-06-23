@@ -1,28 +1,29 @@
-import Image from 'next/image'
-import imageUrl from '../public/images/Mclaren-720S.png'
-import React from 'react'
+import Image from 'next/image';
+import imageUrl from '../public/images/Mclaren-720S.png';
+import React from 'react';
 
-const SpecCard = () => {
-
+const SpecCard = ({ spec, title }) => {
   return (
     <>
-      <div className='flex flex-col'>
-        
-          <>
-            <div className='bg-black/[.50] px-5 md:px-12 lg:px-8 xl:px-16 py-8 rounded-md flex justify-around gap-6'>          
-              <Image
-                src={imageUrl}
-                width={120}          
-                alt=""
-                priority={false}                                            
-              />  
-              <h3 className='text-sm lg:text-xl text-white'>Something</h3>                  
-            </div>              
-          </>          
-        
-      </div>      
+      <div className="flex flex-col h-2 w-full sm:w-[550px]">
+        <>
+          <div className="bg-black/[.50] px-8  w-[100%] py-8 rounded-md flex justify-between gap-6 text-white">
+            <Image
+              src={imageUrl}
+              width={120}
+              alt=""
+              priority={false}
+              className="w-[80%] md:w-[40%]  "
+            />
+            <div className="w-[60%]">
+              <h5 className=" text-xl font-bold capitalize ">{title} </h5>
+              <p className="text-sm  mt-4">{spec}</p>
+            </div>
+          </div>
+        </>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default SpecCard
+export default SpecCard;

@@ -30,17 +30,17 @@ const page = () => {
   };
 
   return (
-    <section className="flex flex-col sm:flex-row bg-signup-bg bg-cover h-[100%] text-white py-6 px-4 tracking-wide">
-      <div className="mx-auto my-6 sm:my-auto sm:order-last">
-        <h3 className="text-2xl text-center md:text-left mb-6 lg:mb-0">
-          Sign Up
+    <section className="flex flex-col md:flex-row bg-signup-bg bg-cover h-[100%] text-black pt-24 py-6 px-4 tracking-wide ">
+      <div className="mx-auto my-6 pt-28 md:order-last rounded-md  bg-white/40 h-72 px-6 text-black">
+        <h3 className="text-3xl text-center md:text-left  mb-6 lg:mb-0 font-bold ml-14">
+          Register Now
         </h3>
-        <p className="sm:text-white text-black font-semibold">
-          Unlock a Seamless Car Buying Experience: Create Your Account Today
+        <p className=" font-semibold max-w-[80%] max-md:text-center mx-auto mt-4">
+          Unlock a Seamless Car Comparing Experience: Create Your Account Today
         </p>
       </div>
       <div
-        className=" bg-overlay_bg mx-auto w-auto 
+        className=" bg-white/40 mx-auto w-auto 
       h-auto pb-1 pt-5 px-14 rounded-lg"
       >
         <Image
@@ -54,7 +54,7 @@ const page = () => {
           <h4 className="text-[28px] font-semibold">Create Account</h4>
 
           <p className="text-[13.5px]">
-            Sign up here for a personalized car shopping experience
+            Register here for a personalized experience
           </p>
           <div className="flex flex-col gap-6">
             <button className="flex gap-2 border-2  w-full justify-center py-2 rounded-md text-lg">

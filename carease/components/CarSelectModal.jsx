@@ -15,7 +15,7 @@ const CompareCarModel = ({ model, carId }) => {
   const carData = async () => {
     const response = await axios.get(`/api/getCar`);
     const data = response.data;
-    const filterdata = data.filter((item) => item.model !== model);
+    const filterdata = data.filter((item) => item.id !== carId);
 
     setCarData(filterdata);
   };
@@ -38,11 +38,9 @@ const CompareCarModel = ({ model, carId }) => {
   }, [carName.id]);
 
   return (
-    // <div className="absolute w-[60%] right-0 bottom-[-1rem] lg:bottom-0 border-none bg-white rounded-full  text-white outline-none ">
     <>
       <Autocomplete
         sx={{
-          padding: 'rem',
           '& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root': {
             borderRadius: '100px',
             padding: '4px 1px 8px 0',

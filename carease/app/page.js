@@ -4,6 +4,7 @@ import VideoCarousels from '@/components/VideoCarousels';
 import About from '@/components/About';
 import FeaturedComparison from '@/components/FeaturedComparison';
 import PopularBrands from '@/components/PopularBrands';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="h-[300px] sm:h-[500px] lg:h-full ">
         <VideoCarousels />
       </div>
+      <Footer />
     </main>
   );
 }

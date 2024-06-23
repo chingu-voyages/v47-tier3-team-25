@@ -9,7 +9,7 @@ const CategoryComponent = ({ carData, desc }) => {
       <div className="mx-4 sm:mx-10">
         <div className="flex items-center justify-between font-normal ">
           <h4 className="text-2xl md:text-4xl font-semibold">
-            {carData[0]?.category.toUpperCase()}{' '}
+            {carData[0]?.category.toUpperCase()}
           </h4>
           <Link
             href={`/category/${carData[0]?.category}`}
@@ -20,7 +20,7 @@ const CategoryComponent = ({ carData, desc }) => {
         </div>
         <p className="text-gray-500 mt-6 md:max-w-120 lg:text-lg">{desc}</p>
       </div>
-      <div className="flex justify-around gap-20 flex-wrap">
+      <div className="flex justify-around gap-20 flex-wrap h-[532px]">
         {carData.map((car) => {
           return (
             <Card

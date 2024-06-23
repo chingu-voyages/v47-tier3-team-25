@@ -5,7 +5,7 @@ import google from '../../../public/images/google.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import axios from 'axios';
-import { Router, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
   const router = useRouter();
@@ -30,11 +30,11 @@ const page = () => {
   };
 
   return (
-    <section className=" bg-supercar   bg-cover h-[100%] text-white py-6 px-4 tracking-wide">
-      <h3 className="text-2xl text-center md:text-left mb-4 lg:mb-0">
+    <section className=" bg-signup-bg   bg-cover h-[100%] text-black py-6 px-4 tracking-wide pt-24">
+      <h3 className="text-3xl font-bold text-rose-600 text-center md:text-left mb-4 lg:mb-0">
         Welcome Back,
       </h3>
-      <div className=" bg-overlay_bg mx-auto w-[100%] sm:w-[428px] h-[670.304px] pb-1 pt-5 px-4 sm:px-14 rounded-lg">
+      <div className=" bg-white/40 mx-auto w-[100%] sm:w-[428px] h-[670.304px] pb-1 pt-0 px-4 sm:px-14 rounded-lg">
         <Link href="/">
           <Image
             src={logo}
@@ -93,15 +93,18 @@ const page = () => {
                 Show
               </button>
             </div>
-            <div className="flex justify-between text-[11.8px]">
+            <div className="flex justify-between text-[11.8px] md:text-[12.8px] font-semibold">
               <div>
                 <input
                   type="checkbox"
-                  className="bg-transparent border-2 mr-1"
+                  className="bg-transparent border-2 mr-1 "
                 />{' '}
                 Remember me
               </div>
-              <Link href="/auth/forgetpassword"> Forgot Password ?</Link>
+              <Link href="/auth/forgetpassword" className="hover:text-black/80">
+                {' '}
+                Forgot Password ?
+              </Link>
             </div>
             <button
               type="submit"

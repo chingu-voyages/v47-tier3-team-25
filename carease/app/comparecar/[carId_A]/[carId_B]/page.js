@@ -13,53 +13,13 @@ const page = ({ params }) => {
     carA: {},
     carB: {},
   });
-  const [carData, setCarData] = useState([]);
   const [carId, setCarId] = useState({
     carId_A: params.carId_A,
     carId_B: params.carId_B,
   });
-  // const carId_A = params.carId_A;
-  // const carId_B = params.carId_B;
 
-  // const getCarList = async () => {
-  //   const response = await axios.get(`/api/getCar`);
-  //   const data = await response.data;
-  //   setCarData(data);
-  // };
-  console.log(carId.carId_A, carId.carId_B);
-  console.log();
-  const handleClick = (e) => {
-    setCarId({ carId_B: e });
-  };
   useEffect(() => {
     const fetchData = async () => {
-      // if (!(parseInt(carId.carId_A) && carId.carId_B)) {
-      //   console.log(1, carId.carId_A, carId.carId_B);
-      //   console.log('hello');
-      //   const response = await axios.get(
-      //     `/api/getCar/65d5fd23386cae919368558a`
-      //   );
-      //   console.log(response.data);
-      //   const carA = response.data;
-      //   setCompareCarData({
-      //     carA: {
-      //       category: carA.category,
-      //       model: carA.model,
-      //       imageUrl: carA.imageUrl,
-      //       mpg: carA.specifications.mpg,
-      //       engine: carA.specifications.engine,
-      //       fuelType: carA.specifications.fuel_type,
-      //       driveTrain: carA.specifications.drivetrain,
-      //       exterior: carA.specifications.exterior,
-      //       exteriorColor: carA.specifications.exterior_color,
-      //       interiorColor: carA.specifications.interior_color,
-      //       transmission: carA.specifications.transmission,
-      //       convenience: carA.specifications.convenience,
-      //     },
-      //     carB: null,
-      //   });
-      // } else {
-      // };
       const response = await axios.get(
         `/api/compareCars/compare/${carId.carId_A}/${carId.carId_B}`
       );
@@ -117,7 +77,11 @@ const page = ({ params }) => {
         <div className="relative flex flex-wrap gap-4 w-[100%] lg:w-[90%] my-10 items-center mx-2">
           <div className=" w-[90%] sm:w-[50%] text-[10px] md:text-2xl border-none bg-white rounded-full  text-white outline-none ">
             <CarSelectModal
-              model={carData?.model}
+              model={
+                carId.carId_A
+                  ? compareCarData?.carA.model
+                  : compareCarData?.carA.model
+              }
               carId={carId.carId_A ? carId.carId_A : carId.carId_B}
             />
           </div>
