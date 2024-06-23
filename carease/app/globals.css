@@ -66,6 +66,9 @@
 .nav-mobile {
   @apply xl:hidden absolute top-16 z-30 flex flex-col gap-6  bg-gradient-to-t to-[#343131]/60 from-black px-6  py-6 right-0 justify-center w-[60%] text-center xl:relative  xl:flex-row xl:w-[80%] xl:top-0 xl:bg-none;
 }
+.nav-hover {
+  @apply hover:text-[#E11D48] focus:text-[#E11D48];
+}
 
 @media (min-width: 452px) and (max-width: 637px) {
   .brands-xsm {

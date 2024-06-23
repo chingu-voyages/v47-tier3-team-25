@@ -10,7 +10,7 @@ const Card = ({ tag, imageUrl, model, carId }) => {
 
   return (
     <div
-      className="relative  md:w-[400px] flex flex-col text-center  flex-wrap my-6 mx-4 md:mx-0"
+      className="relative   md:w-[400px] flex flex-col text-center  flex-wrap my-6 mx-4 md:mx-0"
       onMouseLeave={() => setShow(false)}
     >
       <div className="mt-6 flex items-center  h-[400px] bg-[#D9D9D9] rounded-2xl relative px-4">

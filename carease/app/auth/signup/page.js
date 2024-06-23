@@ -30,17 +30,17 @@ const page = () => {
   };
 
   return (
-    <section className="flex flex-col sm:flex-row bg-signup-bg bg-cover h-[100%] text-white pt-24 py-6 px-4 tracking-wide ">
-      <div className="mx-auto my-6 pt-28 sm:order-last sm:text-white bg-overlay_bg h-72 px-6 text-black">
-        <h3 className="text-3xl text-center md:text-left  mb-6 lg:mb-0 font-bold">
-          Register
+    <section className="flex flex-col md:flex-row bg-signup-bg bg-cover h-[100%] text-black pt-24 py-6 px-4 tracking-wide ">
+      <div className="mx-auto my-6 pt-28 md:order-last rounded-md  bg-white/40 h-72 px-6 text-black">
+        <h3 className="text-3xl text-center md:text-left  mb-6 lg:mb-0 font-bold ml-14">
+          Register Now
         </h3>
-        <p className=" font-semibold">
-          Unlock a Seamless Car Buying Experience: Create Your Account Today
+        <p className=" font-semibold max-w-[80%] max-md:text-center mx-auto mt-4">
+          Unlock a Seamless Car Comparing Experience: Create Your Account Today
         </p>
       </div>
       <div
-        className=" bg-overlay_bg mx-auto w-auto 
+        className=" bg-white/40 mx-auto w-auto 
       h-auto pb-1 pt-5 px-14 rounded-lg"
       >
         <Image
