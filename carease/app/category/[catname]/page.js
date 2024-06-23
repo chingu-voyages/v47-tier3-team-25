@@ -22,7 +22,7 @@ const CategoryName = ({ params }) => {
         {params.catname.toUpperCase()}
       </h4>
 
-      <div className="w-full justify-around flex flex-wrap">
+      <div className="w-full justify-around flex flex-wrap h-[532px]">
         {carsByCategory.map((car) => {
           return (
             <Card

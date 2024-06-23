@@ -42,35 +42,43 @@ const Navbar = () => {
       </div>
       {/* desktop navbar */}
 
-      <div className="nav-desktop font-navItems font-normal">
+      <div className="nav-desktop font-navItems  font-normal">
         <div className="flex items-center  text-lg gap-6 relative">
           <Link
             href="/carlist"
-            className="bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
+            className="bg-white px-8 py-1 rounded-full md:text-sm   nav-hover md:px-3 lg:text-lg lg:px-4 xl:px-8"
           >
             Carlist
           </Link>
           <Link
             href="/comparison"
-            className=" text-white bg-[#E11D48] px-8 py-1  rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
+            className=" text-white bg-[#E11D48] focus:bg-white focus:text-[#E11D48] px-8 py-1  rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
           >
             Compare
           </Link>
           <button
-            className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-8 xl:px-8"
+            className=" bg-white px-8 py-1 rounded-full md:text-sm hover:text-[#E11D48]  md:px-3 lg:text-lg lg:px-8 xl:px-8"
             onClick={() => setShow(!show)}
           >
             More
           </button>
           {show && (
             <div
-              className="absolute bg-gradient-to-t to-[#343131]/80 from-black/50  text-white flex flex-col right-0 top-10 z-80 px-8 rounded-md py-8 shadow-xl gap-4"
+              className="absolute bg-gradient-to-t to-white/80 from-[#343131]/80  text-black flex flex-col right-0 top-10 z-50 px-8 rounded-md py-8 shadow-xl gap-4 "
               onMouseLeave={() => setShow(false)}
             >
-              <Link href="">Super Cars</Link>
-              <Link href="">Popular Cars</Link>
-              <Link href="">Upcoming Cars</Link>
-              <Link href="">Other Cars</Link>
+              <Link href="/category/supercars" className="nav-hover">
+                Super Cars
+              </Link>
+              <Link href="/category/popular" className="nav-hover">
+                Popular Cars
+              </Link>
+              <Link href="/category/upcoming" className="nav-hover">
+                Upcoming Cars
+              </Link>
+              <Link href="/category/other" className="nav-hover">
+                Other Cars
+              </Link>
             </div>
           )}
         </div>
@@ -85,14 +93,14 @@ const Navbar = () => {
             />
             <Link
               href="/auth/signup"
-              className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
+              className=" bg-white px-8 py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8 nav-hover "
             >
               Register
             </Link>
 
             <Link
               href="/auth/login"
-              className=" bg-white px-8  py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8"
+              className=" bg-white px-8  py-1 rounded-full md:text-sm md:px-3 lg:text-lg lg:px-4 xl:px-8 nav-hover"
             >
               Login
             </Link>
