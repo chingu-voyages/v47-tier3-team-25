@@ -2,7 +2,7 @@ import Image from 'next/image';
 import imageUrl from '../public/images/Mclaren-720S.png';
 import React from 'react';
 
-const SpecCard = ({ spec, title }) => {
+const SpecCard = ({ spec, title, imageUrl }) => {
   return (
     <>
       <div className="flex flex-col h-2 w-full sm:w-[550px]">
@@ -11,6 +11,7 @@ const SpecCard = ({ spec, title }) => {
             <Image
               src={imageUrl}
               width={120}
+              height={120}
               alt=""
               priority={false}
               className="w-[80%] md:w-[40%]  "

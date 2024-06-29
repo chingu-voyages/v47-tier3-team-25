@@ -111,6 +111,7 @@ const page = ({ params }) => {
         <div className="flex flex-col-reverse lg:flex-row lg:items-center justify-between mb-16 md:mb-24">
           <VerticalMenu
             title={renderspec}
+            imageUrl={car?.imageUrl}
             spec={car?.specifications?.[renderspec]}
           />
 
