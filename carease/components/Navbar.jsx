@@ -17,10 +17,10 @@ const Navbar = () => {
       <Link href="/">
         <Image
           src="/images/carease-logo.svg"
-          width={150}
-          height={150}
+          width={10}
+          height={10}
           alt="carease"
-          className="w-[100px] xl:w-[150px] "
+          className=" w-[100px] h-[45px] xl:w-[165px] "
         />
       </Link>
       <div className="flex items-center gap-10">
@@ -29,7 +29,7 @@ const Navbar = () => {
           width={30}
           height={10}
           alt="compare-amount"
-          className="md:hidden block"
+          className="md:hidden block md:w-[30px] w-[20px]"
         />
         <button
           type="button"
