@@ -20,7 +20,7 @@ const CategoryComponent = ({ carData, desc }) => {
         </div>
         <p className="text-gray-500 mt-6 md:max-w-120 lg:text-lg">{desc}</p>
       </div>
-      <div className="flex justify-around gap-20 flex-wrap h-[532px]">
+      <div className="flex justify-around gap-20 flex-wrap h-auto xl:h-[532px]">
         {carData.map((car) => {
           return (
             <Card

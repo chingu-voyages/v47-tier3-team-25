@@ -13,7 +13,7 @@ const Card = ({ tag, imageUrl, model, carId }) => {
       className="relative   md:w-[400px] flex flex-col text-center  flex-wrap my-6 mx-4 md:mx-0"
       onMouseLeave={() => setShow(false)}
     >
-      <div className="mt-6 flex items-center  h-[400px] bg-[#D9D9D9] rounded-2xl relative px-4">
+      <div className="mt-6 flex items-center h-[350px] md:h-[400px] bg-[#D9D9D9]/50 rounded-2xl relative px-4">
         <p className="uppercase text-center  bg-primary rounded-bl-xl rounded-tr-xl   w-[200px]  absolute top-0 pt-2 pb-1 text-white right-0   text-sm mx-auto  ">
           {tag}
         </p>
@@ -25,18 +25,24 @@ const Card = ({ tag, imageUrl, model, carId }) => {
           alt={model}
           priority={false}
         />
+        <p className="absolute  left-1/2 transform -translate-x-1/2  bottom-0   text-sm text-gray-600 font-semibold md:text-xl my-4  ">
+          {model}
+        </p>
       </div>
-      <p className=" text-2xl md:text-3xl my-4">{model}</p>
-      <div className="flex justify-between px-2 ">
+      <div className="flex justify-between px-2 mt-4">
         <Link href={`/single-car/${carId}`}>
           <Button
-            styleType={'border-2 border-primary  text-primary '}
+            styleType={
+              'border-2 border-primary  text-primary h-10 hover:text-white hover:bg-primary '
+            }
             name="View Model"
           />
         </Link>
         <Button
           handleModel={() => setShow(!show)}
-          styleType={' bg-primary text-white'}
+          styleType={
+            ' bg-primary text-white hover:text-primary  hover:border-2 border-primary hover:bg-white'
+          }
           name="Compare"
         />
       </div>{' '}
